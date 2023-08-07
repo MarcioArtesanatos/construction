@@ -1,5 +1,4 @@
 "use client"
-import NavBar from './components/NavBar';
 import Carrossel from './components/Carrossel';
 import Card from './components/Card';
 import Footer from './components/Footer';
@@ -12,7 +11,7 @@ import foguete from "../../public/foguete.jpg"
 export default function Home() {
   return (
     <div className="">
-      <NavBar />
+     
       <Carrossel />
       <main className='bg-light w-full  py-20'>
         <div className='flex justify-center items-center px-16 space-x-20'>
@@ -43,24 +42,25 @@ export default function Home() {
             menu
           </div>
           <div className=' w-full rounded-xl'>
+
             <h2 className='uppercase'>Novos Produtos</h2>
             <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preço=" R$ 10,00" link={caminhao}/>
-              <Card title="Elicoptero" preço=" R$ 10,00" link={elicoptero}/>
-              <Card title="Futebol" preço=" R$ 10,00" link={futebol}/>
-              <Card title="Girafa" preço=" R$ 10,00" link={girafa}/>
-              <Card title="Lápis" preço=" R$ 10,00" link={lapis}/>
-              <Card title="Foguete" preço=" R$ 10,00" link={foguete}/>
-              
+              <Card title="Caminhão" preço=" R$ 10,00" link={caminhao} href="compra"/>
+              <Card title="Elicoptero" preço=" R$ 10,00" link={elicoptero} href="compra"/>
+              <Card title="Futebol" preço=" R$ 10,00" link={futebol} href="compra"/>
+              <Card title="Girafa" preço=" R$ 10,00" link={girafa} href="compra"/>
+              <Card title="Lápis" preço=" R$ 10,00" link={lapis} href="compra"/>
+              <Card title="Foguete" preço=" R$ 10,00" link={foguete} href="compra"/>
             </div>
+            
             <h2 className='uppercase'>Mais comprados</h2>
             <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
-            <Card title="Caminhão" preço=" R$ 10,00" link={caminhao}/>
-              <Card title="Elicoptero" preço=" R$ 10,00" link={elicoptero}/>
-              <Card title="Futebol" preço=" R$ 10,00" link={futebol}/>
-              <Card title="Girafa" preço=" R$ 10,00" link={girafa}/>
-              <Card title="Lápis" preço=" R$ 10,00" link={lapis}/>
-              <Card title="Foguete" preço=" R$ 10,00" link={foguete}/>
+            <Card title="Caminhão" preço=" R$ 10,00" link={caminhao} href="compra"/>
+              <Card title="Elicoptero" preço=" R$ 10,00" link={elicoptero} href="compra"/>
+              <Card title="Futebol" preço=" R$ 10,00" link={futebol} href="compra"/>
+              <Card title="Girafa" preço=" R$ 10,00" link={girafa} href="compra"/>
+              <Card title="Lápis" preço=" R$ 10,00" link={lapis} href="compra"/>
+              <Card title="Foguete" preço=" R$ 10,00" link={foguete} href="compra"/>
             </div>
           </div>
         </div>
