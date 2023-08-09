@@ -1,11 +1,12 @@
 "use client"
-import image from '../../../public/foguete.jpg'
+import image from '../../../public/elicoptero.jpeg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import CarrosselCompra from '../components/CarrosselCompra';
 import { useState } from 'react';
+import Card from '../components/Card';
 
-
+import elicoptero from "../../../public/elicoptero.jpeg"
 
 export default function Compra() {
 
@@ -49,10 +50,26 @@ export default function Compra() {
             <button className='bg-black/90 px-5 py-2 text-white hover:bg-white hover:text-black font-bold transition-all duration-300'>
               Comprar
             </button>
-
           </div>
         </div>
-        <div>
+      </div>
+      <div className='p-10'>
+        <h2 className='text-white text-xl py-5'>Descrição Completa</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, sit. Eligendi, obcaecati similique. Pariatur rem dolore ut eius, suscipit nam laboriosam, consequatur, nostrum earum obcaecati quas nemo odit sapiente cumque.
+        </p><br />
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, sit. Eligendi, obcaecati similique. Pariatur rem dolore ut eius, suscipit nam laboriosam, consequatur, nostrum earum obcaecati quas nemo odit sapiente cumque.
+        </p><br />
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, sit. Eligendi, obcaecati similique. Pariatur rem dolore ut eius, suscipit nam laboriosam, consequatur, nostrum earum obcaecati quas nemo odit sapiente cumque.
+        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, sit. Eligendi, obcaecati similique. Pariatur rem dolore ut eius, suscipit nam laboriosam, consequatur, nostrum earum obcaecati quas nemo odit sapiente cumque.
+        </p><br />
+      </div>
+      <div className='p-10'>
+        <h2 className='text-white text-xl py-5'>Produtos Relacionados</h2>
+        <div className='flex justify-between'>
+          <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
+          <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
+          <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
         </div>
       </div>
     </div>

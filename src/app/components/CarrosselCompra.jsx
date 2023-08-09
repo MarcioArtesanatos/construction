@@ -18,7 +18,7 @@ export default function CarrosselCompra({ primeira, segunda, terceira, title }) 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <div className='w-full pr-5'>
+        <div className='pr-5'>
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#fff',
@@ -29,10 +29,10 @@ export default function CarrosselCompra({ primeira, segunda, terceira, title }) 
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2 w-full h-full styles.swiper mb-5 "
+                className="mySwiper2 w-96 h-full styles.swiper mb-5 "
             >
-                <SwiperSlide className='text-center text-xl bg-white flex justify-center items-center'>
-                    <Image src={primeira} alt={title} className='w-full h-full object-cover'/>
+                <SwiperSlide className='text-center text-xl bg-white flex justify-center items-center round'>
+                    <Image src={primeira} alt={title} className='w-full h-full object-cover '/>
                 </SwiperSlide>
                 <SwiperSlide className='text-center text-xl flex justify-center items-center'>
                     <Image src={segunda} alt={title} className='w-full h-full object-cover'/>

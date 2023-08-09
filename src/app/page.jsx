@@ -1,12 +1,11 @@
 "use client"
 import Carrossel from './components/Carrossel';
 import Card from './components/Card';
-import Footer from './components/Footer';
 import caminhao from "../../public/caminhao.jpg"
-import elicoptero from "../../public/elicoptero.jpg"
-import futebol from "../../public/futebol.jpg"
-import lapis from "../../public/lapis.jpg"
-import girafa from "../../public/girafa.jpg"
+import elicoptero from "../../public/elicoptero.jpeg"
+import futebol from "../../public/futebol.jpeg"
+import lapis from "../../public/lapis.jpeg"
+import girafa from "../../public/girafa.jpeg"
 import foguete from "../../public/foguete.jpg"
 export default function Home() {
   return (
@@ -45,7 +44,7 @@ export default function Home() {
 
             <h2 className='uppercase'>Novos Produtos</h2>
             <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preço=" R$ 10,00" link={caminhao} href="compra"/>
+              <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra"/>
               <Card title="Elicoptero" preço=" R$ 10,00" link={elicoptero} href="compra"/>
               <Card title="Futebol" preço=" R$ 10,00" link={futebol} href="compra"/>
               <Card title="Girafa" preço=" R$ 10,00" link={girafa} href="compra"/>
@@ -55,7 +54,7 @@ export default function Home() {
             
             <h2 className='uppercase'>Mais comprados</h2>
             <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
-            <Card title="Caminhão" preço=" R$ 10,00" link={caminhao} href="compra"/>
+            <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra"/>
               <Card title="Elicoptero" preço=" R$ 10,00" link={elicoptero} href="compra"/>
               <Card title="Futebol" preço=" R$ 10,00" link={futebol} href="compra"/>
               <Card title="Girafa" preço=" R$ 10,00" link={girafa} href="compra"/>
@@ -65,7 +64,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <Footer/>
     </div>
   );
 }

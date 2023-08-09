@@ -1,5 +1,5 @@
 
-
+import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import './globals.css'
 import { Montserrat, Lobster } from 'next/font/google'
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${montserrat.variable} ${lobster.variable} bg-gradient-to-r from-cyan-500 to-blue-500 w-full min-h-screen z-10`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   )

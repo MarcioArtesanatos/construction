@@ -19,8 +19,8 @@ export default function Card({ preço, link, title, href }) {
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className="group bg-black/5 flex flex-col w-56 h-56 p-5 rounded-xl relative felx justify-center items-center">
-      <Image src={link} alt={title} height={100} className="rounded-xl" />
+    <div className="group bg-black/5 flex flex-col w-56 h-72 p-5 rounded-xl relative felx justify-center items-center">
+      <Image src={link} alt={title} height={200} className="rounded-xl" />
       <h2 className="mt-5">{title}</h2>
       <p>{preço}</p>
       <span

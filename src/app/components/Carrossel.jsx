@@ -1,7 +1,7 @@
 "use client"
-import caminhao from "../../../public/caminhao.jpg"
-import elicoptero from "../../../public/elicoptero.jpg"
-import futebol from "../../../public/futebol.jpg"
+import girafa from "../../../public/girafa.jpeg"
+import elicoptero from "../../../public/elicoptero.jpeg"
+import futebol from "../../../public/futebol.jpeg"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,7 +17,7 @@ import Image from 'next/image';
 
 export default function Carrossel() {
   return (
-    <div className="">
+    <div className="pb-10">
 
       <Swiper
         spaceBetween={30}
@@ -36,7 +36,7 @@ export default function Carrossel() {
 
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper w-[90%] h-[450px] mt-10"
+        className="mySwiper w-[90%] h-[500px] mt-10"
         style={{
           // Adicione o estilo inline para alterar a cor da bolinha de paginação
           "--swiper-pagination-color": "#f5f5f5",
@@ -51,25 +51,25 @@ export default function Carrossel() {
 
         </div>
         <SwiperSlide className='!flex !justify-center !items-center gap-36'>
+        <div className="flex flex-col gap-5 ml-20">
+            <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
+            <button className="bg-light rounded-lg w-44">Preço</button>
+          </div>
+          <Image src={girafa} alt='brinquedo' width={400} className="" />
+        </SwiperSlide>
+        <SwiperSlide className='!flex !justify-center !items-center gap-44'>
           <div className="flex flex-col gap-5 ml-20">
             <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
             <button className="bg-light rounded-lg w-44">Preço</button>
           </div>
-          <Image src={caminhao} alt='brinquedo' width={500}/>
+          <Image src={elicoptero} alt='brinquedo' width={400} />
         </SwiperSlide>
         <SwiperSlide className='!flex !justify-center !items-center gap-44'>
-        <div className="flex flex-col gap-5 ml-20">
-        <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
-           <button className="bg-light rounded-lg w-44">Preço</button>
+          <div className="flex flex-col gap-5 ml-20">
+            <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
+            <button className="bg-light rounded-lg w-44">Preço</button>
           </div>
-          <Image src={elicoptero} alt='brinquedo' width={500}/>
-        </SwiperSlide>
-        <SwiperSlide className='!flex !justify-center !items-center gap-44'>
-        <div className="flex flex-col gap-5 ml-20">
-        <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
-           <button className="bg-light rounded-lg w-44">Preço</button>
-          </div>
-          <Image src={futebol} alt='brinquedo' width={500} />
+          <Image src={futebol} alt='brinquedo' width={400} />
         </SwiperSlide>
 
       </Swiper>
