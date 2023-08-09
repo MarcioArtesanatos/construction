@@ -1,13 +1,15 @@
-import Image from "next/image";
+
 import image from '../../../public/foguete.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import CarrosselCompra from '../components/CarrosselCompra';
+
 export default function Compra() {
   return (
     <div className="p-16">
       <div className="flex bg-white/10 rounded-lg p-10">
-        <div className="flex items-center justify-center w-1/2">
-          <Image src={image} alt="image" width={500} />
+        <div className="flex items-center justify-center w-1/2 h-full">
+          <CarrosselCompra primeira={image} segunda={image} terceira={image} title="foto de um foguete"/>
         </div>
         <div className="w-1/2 text-white">
           <h2 className="text-2xl py-5 border-b ">Foguete</h2>
