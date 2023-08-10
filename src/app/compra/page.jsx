@@ -14,12 +14,12 @@ export default function Compra() {
 
   return (
     <div className="p-16">
-      <div className="flex bg-white/25 rounded-lg p-10">
-        <div className="flex items-center justify-center w-1/2 h-full">
+      <div className="flex justify-center rounded-lg p-10 ">
+        <div className="flex items-center justify-center  h-full">
           <CarrosselCompra primeira={image} segunda={image} terceira={image} title="foto de um foguete" />
         </div>
-        <div className="w-1/2 text-black/75">
-          <h2 className="text-5xl py-5 border-b text-white font-bold drop-shadow-dark">Foguete</h2>
+        <div className=" w-[40%] text-black/75">
+          <h2 className="text-5xl pb-2 border-b text-white font-bold">Foguete</h2>
           <div className="flex gap-2">
             <FontAwesomeIcon icon={faStar} className="w-4 text-yellow-500 py-5" />
             <FontAwesomeIcon icon={faStar} className="w-4 text-yellow-500 py-5" />
@@ -29,7 +29,7 @@ export default function Compra() {
           </div>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure beatae quod cumque numquam possimus dolorum dicta voluptates facere eaque, minima cum quidem odit officiis magni rerum quis tempore dolores vero.</p>
           <div className='flex justify-start items-center gap-2 py-10'>
-            <p className='text-2xl line-through'>$372.00 </p><span className='text-white drop-shadow-dark font-bold text-3xl '>$334.80</span>
+            <p className='text-2xl line-through'>$372.00 </p><span className='text-white font-bold text-3xl '>$334.80</span>
           </div>
           <div className='flex gap-5'>
             <div className="flex w-28 items-center justify-center gap-5 border border-white ">
@@ -66,7 +66,7 @@ export default function Compra() {
       </div>
       <div className='p-10'>
         <h2 className='text-white text-xl py-5'>Produtos Relacionados</h2>
-        <div className='flex justify-between'>
+        <div className='flex items-center justify-center gap-10'>
           <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
           <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
           <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
