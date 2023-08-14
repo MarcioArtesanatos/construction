@@ -37,7 +37,7 @@ export default function Home() {
               <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade"/>
             </div>
             <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Novos Produtos</h2>
-            <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
+            <div className='py-5 flex flex-wrap w-full items-center justify-center'>
               <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Elicoptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />

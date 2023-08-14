@@ -19,9 +19,9 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className="group bg-black/5 flex flex-col w-56 h-[490px] p-5 rounded-xl relative felx justify-center items-center">
+    <div className="group bg-black/5 mr-5 mb-5 flex flex-col w-64 h-[520px] p-5 rounded-xl relative felx justify-center items-center">
       <div className="relative">
-        <Image src={link} alt={title} height={200} className="rounded-xl" />
+        <Image src={link} alt={title} height={300} className="rounded-xl" />
 
         <span
           className=" flex justify-center items-center bg-gradient-to-r from-cyan-500/75 to-blue-500/75 backdrop-blur-md absolute w-full top-0 left-0 rounded-xl h-0 group-hover:h-full transition-[height] ease duration-300 "
