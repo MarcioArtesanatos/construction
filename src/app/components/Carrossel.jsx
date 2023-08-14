@@ -52,8 +52,8 @@ export default function Carrossel() {
         </div>
         <SwiperSlide className='!flex !justify-center !items-center gap-36'>
         <div className="flex flex-col gap-5 ml-20">
-            <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
-            <button className="bg-light rounded-lg w-44">Preço</button>
+            <h2 className="text-white font-bold text-7xl">Brinquedo X</h2>
+            <button className="bg-white rounded-lg w-44">Preço</button>
           </div>
           <Image src={girafa} alt='brinquedo' width={400} className="" />
         </SwiperSlide>
