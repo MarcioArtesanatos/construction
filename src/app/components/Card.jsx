@@ -7,7 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 
-export default function Card({ preço, link, title, href }) {
+export default function Card({ preco, parcela, precoDesc, link, title, href }) {
 
   const [isTapped, setIsTapped] = useState(false);
   const [isTapped1, setIsTapped1] = useState(false);
@@ -19,10 +19,12 @@ export default function Card({ preço, link, title, href }) {
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className="group bg-black/5 flex flex-col w-56 h-72 p-5 rounded-xl relative felx justify-center items-center">
+    <div className="group bg-black/5 flex flex-col w-56 h-96 p-5 rounded-xl relative felx justify-center items-center">
       <Image src={link} alt={title} height={200} className="rounded-xl" />
-      <h2 className="mt-5">{title}</h2>
-      <p>{preço}</p>
+      <h2 className="my-5">{title}</h2>
+      <p className="text-lg font-bold">R${preco}</p>
+      <p className="text-black/75 text-sm">até 6x de R${parcela} sem juros</p>
+      <p className="text-center text-sm">R${precoDesc} no pix/boleto com 10% de desconto </p>
       <span
         className=" flex justify-center items-center bg-cyan-500/70  absolute w-full left-0 rounded-xl h-0 group-hover:h-full transition-[height] ease duration-300 "
       >
@@ -45,7 +47,7 @@ export default function Card({ preço, link, title, href }) {
           onClick={handleTap}
         >
           <div className="opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-light font-bold">
-            <FontAwesomeIcon icon={faHeart} className={` h-6 ${isTapped ? "text-red-500" : "text-light"} transition ease-in-out duration-300`}
+            <FontAwesomeIcon icon={faHeart} className={`h-6 ${isTapped ? "text-red-500" : "text-light"} transition ease-in-out duration-300`}
             />
             Favoritar
           </div>
