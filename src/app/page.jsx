@@ -5,7 +5,6 @@ import elicoptero from "../../public/elicoptero.jpeg"
 import futebol from "../../public/futebol.jpeg"
 import lapis from "../../public/lapis.jpeg"
 import girafa from "../../public/girafa.jpeg"
-import foguete from "../../public/foguete.jpg"
 import Link from 'next/link';
 
 const CardIdade = ({ idade, diaMes, link }) => {
