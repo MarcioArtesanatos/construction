@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion"
 import { useState } from "react";
 import Link from "next/link";
@@ -19,14 +19,18 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className="group bg-black/5 flex flex-col w-56 h-96 p-5 rounded-xl relative felx justify-center items-center">
+    <div className="group bg-black/5 flex flex-col w-56 h-[450px] p-5 rounded-xl relative felx justify-center items-center">
       <Image src={link} alt={title} height={200} className="rounded-xl" />
       <h2 className="my-5">{title}</h2>
       <p className="text-lg font-bold">R${preco}</p>
       <p className="text-black/75 text-sm">até 6x de R${parcela} sem juros</p>
       <p className="text-center text-sm">R${precoDesc} no pix/boleto com 10% de desconto </p>
+      <Link href="#" target="_blank" className="bg-blue-500 px-5 py-2 my-2 text-white rounded">
+      <FontAwesomeIcon icon={faShareAlt} className="mr-2"/> 
+      Compartilhar 
+      </Link>
       <span
-        className=" flex justify-center items-center bg-cyan-500/70  absolute w-full left-0 rounded-xl h-0 group-hover:h-full transition-[height] ease duration-300 "
+        className=" flex justify-center items-center bg-cyan-500/70  absolute w-full top-0 left-0 rounded-xl h-0 group-hover:h-[50%] transition-[height] ease duration-300 "
       >
         <Link href={href}
           initial={{ scale: 1 }}
