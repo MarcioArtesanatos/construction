@@ -13,7 +13,7 @@ export default function Compra() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="p-16 bg-slate-300">
+    <div className="p-16 bg-light">
       <div className="flex justify-center rounded-lg p-10 ">
         <div className="flex items-center justify-center  h-full">
           <CarrosselCompra primeira={image} segunda={image} terceira={image} title="foto de um foguete" />

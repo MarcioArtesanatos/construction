@@ -6,13 +6,14 @@ import futebol from "../../public/futebol.jpeg"
 import lapis from "../../public/lapis.jpeg"
 import girafa from "../../public/girafa.jpeg"
 import foguete from "../../public/foguete.jpg"
+import Link from 'next/link';
 
-const CardIdade = ({ idade, diaMes }) => {
+const CardIdade = ({ idade, diaMes, link }) => {
   return (
-    <div className='border-dashed border-4 border-blue-500 text-blue-500 p-10 text-4xl text-center font-black font-lobster hover:bg-blue-500 hover:text-white transition-all duration-300'>
+    <Link href={link} className='border-dashed border-4 border-blue-500 hover:border-white text-blue-500 p-10 text-4xl text-center font-black font-lobster hover:bg-blue-500 hover:text-white transition-all duration-300'>
       <h2>{idade}</h2>
       <p>{diaMes}</p>
-    </div>
+    </Link>
   )
 }
 
@@ -29,30 +30,30 @@ export default function Home() {
         <div className=' px-16 w-full h-auto flex'>
           <div className=' w-full rounded-xl flex justify-center items-center flex-col'>
             <div className='flex gap-5'>
-              <CardIdade idade="0 - 24" diaMes="Mês" />
-              <CardIdade idade="3 - 5" diaMes="Anos" />
-              <CardIdade idade="5 - 7" diaMes="Anos" />
-              <CardIdade idade="7 - 9" diaMes="Anos" />
-              <CardIdade idade="9 - 12" diaMes="Anos" />
+              <CardIdade idade="0 - 24" diaMes="Mês" link="/por-idade"/>
+              <CardIdade idade="3 - 5" diaMes="Anos" link="/por-idade"/>
+              <CardIdade idade="5 - 7" diaMes="Anos" link="/por-idade"/>
+              <CardIdade idade="7 - 9" diaMes="Anos" link="/por-idade"/>
+              <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade"/>
             </div>
             <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Novos Produtos</h2>
             <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" link={elicoptero} href="compra" />
-              <Card title="Elicoptero" preco=" 10,00" link={elicoptero} href="compra" />
-              <Card title="Futebol" preco="10,00" precoDesc="10,00" link={futebol} href="compra" />
-              <Card title="Girafa" preco="10,00" precoDesc="10,00" link={girafa} href="compra" />
-              <Card title="Lápis" preco="10,00" precoDesc="10,00" link={lapis} href="compra" />
-              <Card title="Foguete" preco="10,00" precoDesc="10,00" link={foguete} href="compra" />
+              <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+              <Card title="Elicoptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+              <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
+              <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
+              <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
+              <Card title="Foguete" preco="10,00" precoDesc="10,00" parcela="10,00" link={foguete} href="compra" />
             </div>
 
             <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Mais comprados</h2>
             <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preco="10,00" precoDesc="10,00" link={elicoptero} href="compra" />
-              <Card title="Elicoptero" preco="10,00" precoDesc="10,00" link={elicoptero} href="compra" />
-              <Card title="Futebol" preco=" 10,00" precoDesc="10,00" link={futebol} href="compra" />
-              <Card title="Girafa" preco="10,00" precoDesc="10,00" link={girafa} href="compra" />
-              <Card title="Lápis" preco="10,00" precoDesc="10,00" link={lapis} href="compra" />
-              <Card title="Foguete" preco="10,00" precoDesc="10,00" link={foguete} href="compra" />
+              <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+              <Card title="Elicoptero" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+              <Card title="Futebol" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
+              <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
+              <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
+              <Card title="Foguete" preco="10,00" precoDesc="10,00" parcela="10,00" link={foguete} href="compra" />
             </div>
           </div>
         </div>
