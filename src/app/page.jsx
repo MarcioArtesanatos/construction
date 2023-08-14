@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
-    <Link href={link} className='border-dashed border-4 border-blue-500 hover:border-white text-blue-500 p-10 text-4xl text-center font-black font-lobster hover:bg-blue-500 hover:text-white transition-all duration-300'>
+    <Link href={link} className='border-dashed border-4 border-blue-500 hover:border-white text-blue-500 p-10 text-4xl text-center font-black font-lobster hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white transition-all duration-300'>
       <h2>{idade}</h2>
       <p>{diaMes}</p>
     </Link>

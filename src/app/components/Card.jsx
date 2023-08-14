@@ -19,12 +19,12 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className="group bg-black/5 flex flex-col w-56 h-[490px] border border-black/75 p-5 rounded-xl relative felx justify-center items-center">
+    <div className="group bg-black/5 flex flex-col w-56 h-[490px] p-5 rounded-xl relative felx justify-center items-center">
       <div className="relative">
         <Image src={link} alt={title} height={200} className="rounded-xl" />
 
         <span
-          className=" flex justify-center items-center bg-blue-500/70 backdrop-blur-md absolute w-full top-0 left-0 rounded-xl h-0 group-hover:h-full transition-[height] ease duration-300 "
+          className=" flex justify-center items-center bg-gradient-to-r from-cyan-500/75 to-blue-500/75 backdrop-blur-md absolute w-full top-0 left-0 rounded-xl h-0 group-hover:h-full transition-[height] ease duration-300 "
         >
           <Link href={href}
             initial={{ scale: 1 }}
@@ -58,7 +58,7 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
       <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
       <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p>
       </div>
-      <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-10">
+      <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-10">
         
         <FontAwesomeIcon icon={faShareSquare} className="mr-2" />
         Compartilhar

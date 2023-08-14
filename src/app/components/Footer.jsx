@@ -19,11 +19,10 @@ export default function Footer() {
         </div>
         <div className="flex flex-col justify-start space-y-5 mr-20">
           <h2 className="uppercase font-bold">Institucional</h2>
-          <Link href="#" target="_blank"className="hover:text-blue-500 transition-all duration-300">Fale Conosco</Link>
-          <Link href="#" target="_blank"className="hover:text-blue-500 transition-all duration-300">Política de Privaciade</Link>
-          <Link href="#" target="_blank"className="hover:text-blue-500 transition-all duration-300">Nossas Políticas de troca e devolução</Link>
-          <Link href="#" target="_blank"className="hover:text-blue-500 transition-all duration-300">Quem Somos?</Link>
-          <Link href="#" target="_blank"className="hover:text-blue-500 transition-all duration-300">Nossa História</Link>
+          <Link href="fale-conosco" className="hover:text-blue-500 transition-all duration-300">Fale Conosco</Link>
+          <Link href="/politica-de-privacidade" className="hover:text-blue-500 transition-all duration-300">Política de Privaciade</Link>
+          <Link href="politica-de-troca-e-devolucao" className="hover:text-blue-500 transition-all duration-300">Nossas Políticas de troca e devolução</Link>
+          <Link href="quem-somos" className="hover:text-blue-500 transition-all duration-300">Quem Somos?</Link>
         </div>
 
         <div className="flex flex-col gap-5 mr-20">
@@ -39,12 +38,12 @@ export default function Footer() {
           <div className="flex gap-2">
             <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faInstagram} /></Link>
             <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faFacebook} /></Link>
-             
+
           </div>
         </div>
 
       </div>
-      <div className=" bg-zinc-900 w-full text-light flex flex-col items-center justify-center text-center">
+      <div className=" bg-gradient-to-r from-cyan-500 to-blue-500 w-full text-light flex flex-col items-center justify-center text-center">
         <p className="text-sm">
           {ano}, Nome da Empresa - Todos os Direitos Reservados
         </p>
