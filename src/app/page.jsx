@@ -39,21 +39,21 @@ export default function Home() {
             <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Novos Produtos</h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
               <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
-              <Card title="Elicoptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+              <Card title="Helicóptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
               <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
-              <Card title="Foguete" preco="10,00" precoDesc="10,00" parcela="10,00" link={foguete} href="compra" />
+              
             </div>
 
             <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Mais comprados</h2>
-            <div className='py-5 flex gap-5 flex-wrap w-full items-center justify-center'>
+            <div className='py-5 flex flex-wrap w-full items-center justify-center'>
               <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Elicoptero" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
               <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
-              <Card title="Foguete" preco="10,00" precoDesc="10,00" parcela="10,00" link={foguete} href="compra" />
+             
             </div>
           </div>
         </div>
