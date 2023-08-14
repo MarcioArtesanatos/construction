@@ -49,7 +49,7 @@ export default function Footer() {
         </p>
         <div className="flex">
           <p className="text-sm">Developed by&nbsp; </p>{' '}
-          <a href="" className="font-bold text-light hover:text-blue-500 transition ease-in-out duration-300">
+          <a href="" className="font-bold text-light hover:text-yellow-500 transition ease-in-out duration-300">
             Rixxer &trade;
           </a>
         </div>
