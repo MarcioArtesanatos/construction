@@ -38,18 +38,18 @@ export default function NavBar() {
           <Link href="/" target="_blank" className="mx-4">lorem</Link>
         </div>
       </div>
-      <div className="w-full flex justify-between items-center rounded-xl mt-5">
+      <div className="w-full flex justify-between items-center rounded-xl mt-5 pb-5">
         <nav>
           <CustomLink href="/" title="Inicio" className="ml-4" />
-          <CustomLink href="/about" title="Sobre" className="mx-4" />
-          <CustomLink href="/projects" title="Lorem" className="mx-4" />
-          <CustomLink href="/article" title="Lorem" className="mx-4" />
+          <CustomLink href="/" title="Sobre" className="mx-4" />
+          <CustomLink href="/" title="Lorem" className="mx-4" />
+          <CustomLink href="/" title="Lorem" className="mx-4" />
         </nav>
         <nav>
           <CustomLink href="/" title="Inicio" className="mx-4" />
-          <CustomLink href="/about" title="Sobre" className="mx-4" />
-          <CustomLink href="/projects" title="Lorem" className="mx-4" />
-          <CustomLink href="/article" title="Lorem" className="mr-4" />
+          <CustomLink href="/" title="Sobre" className="mx-4" />
+          <CustomLink href="/" title="Lorem" className="mx-4" />
+          <CustomLink href="/" title="Lorem" className="mr-4" />
         </nav>
       </div>
     </div>

@@ -1,7 +1,6 @@
 "use client"
 import Carrossel from './components/Carrossel';
 import Card from './components/Card';
-import caminhao from "../../public/caminhao.jpg"
 import elicoptero from "../../public/elicoptero.jpeg"
 import futebol from "../../public/futebol.jpeg"
 import lapis from "../../public/lapis.jpeg"
