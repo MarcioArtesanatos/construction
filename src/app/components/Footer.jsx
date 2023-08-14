@@ -44,8 +44,8 @@ export default function Footer() {
 
       </div>
       <div className=" bg-gradient-to-r from-cyan-500 to-blue-500 w-full text-light flex flex-col items-center justify-center text-center">
-        <p className="text-sm">
-          {ano}, Nome da Empresa - Todos os Direitos Reservados
+        <p className="text-xs">
+           Marcio Artesanatos Brinquedos Educativos-CNPJ: 0000000000000000000000000 Todos os Direitos Reservados, {ano}
         </p>
         <div className="flex">
           <p className="text-sm">Developed by&nbsp; </p>{' '}

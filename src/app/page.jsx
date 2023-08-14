@@ -6,6 +6,8 @@ import futebol from "../../public/futebol.jpeg"
 import lapis from "../../public/lapis.jpeg"
 import girafa from "../../public/girafa.jpeg"
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCreditCard, faShield, faShieldAlt, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
@@ -23,36 +25,60 @@ export default function Home() {
 
       <Carrossel />
       <main className='bg-light w-full  py-20'>
-        <div className='flex justify-center items-center px-16 space-x-20'>
+        <div className='flex justify-center items-center'>
 
-        </div>
-        <div className=' px-16 w-full h-auto flex'>
-          <div className=' w-full rounded-xl flex justify-center items-center flex-col'>
-            <div className='flex gap-5'>
-              <CardIdade idade="0 - 24" diaMes="Mês" link="/por-idade"/>
-              <CardIdade idade="3 - 5" diaMes="Anos" link="/por-idade"/>
-              <CardIdade idade="5 - 7" diaMes="Anos" link="/por-idade"/>
-              <CardIdade idade="7 - 9" diaMes="Anos" link="/por-idade"/>
-              <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade"/>
+          <div className=' mx-16 mb-16  flex justify-center items-center'>
+            <FontAwesomeIcon icon={faTruckFast} className='h-6 text-blue-500 mr-2' />
+            <div>
+              <h2 className='text-blue-500 font-bold text-lg'>Entrega Rápida</h2>
+              <p className='text-black/75 text-sm -mt-1'>Para tado Brasil</p>
             </div>
-            <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Novos Produtos</h2>
+          </div>
+          <div className='mx-16 mb-16 flex justify-center items-center'>
+            <FontAwesomeIcon icon={faCreditCard} className='h-6 text-blue-500 mr-2' />
+            <div>
+              <h2 className='text-blue-500 font-bold text-lg'>Parcelamento</h2>
+              <p className='text-black/75 text-sm -mt-1'>Em até 6x sem juros</p>
+            </div>
+          </div>
+          <div className='mx-16 mb-16 flex justify-center items-center'>
+            <FontAwesomeIcon icon={faShieldAlt} className='h-6 text-blue-500 mr-2' />
+            <div>
+              <h2 className='text-blue-500 font-bold text-lg'>Loja Segura</h2>
+              <p className='text-black/75 text-sm -mt-1'>Selo SSL de proteção</p>
+            </div>
+          </div>
+        </div>
+
+        <div className=' px-16 w-full h-auto flex'>
+
+          <div className=' w-full rounded-xl flex justify-center items-center flex-col'>
+            <h2 className='text-black/75 font-bold py-10 text-4xl '>Compre por Categoria</h2>
+            <div className='flex gap-5'>
+              <CardIdade idade="0 - 24" diaMes="Mês" link="/por-idade" />
+              <CardIdade idade="3 - 5" diaMes="Anos" link="/por-idade" />
+              <CardIdade idade="5 - 7" diaMes="Anos" link="/por-idade" />
+              <CardIdade idade="7 - 9" diaMes="Anos" link="/por-idade" />
+              <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade" />
+            </div>
+            <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Novos Produtos</h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
               <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Helicóptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
               <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
-              
+
             </div>
 
-            <h2 className='uppercase my-24 font-bold text-blue-500 text-2xl'>Mais comprados</h2>
+            <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Mais comprados</h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
               <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Elicoptero" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
               <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
-             
+
             </div>
           </div>
         </div>
