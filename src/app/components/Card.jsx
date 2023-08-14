@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faHeart, faShare, faShareAlt, faShareNodes, faShareSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion"
 import { useState } from "react";
 import Link from "next/link";
@@ -25,12 +25,12 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
       <p className="text-lg font-bold">R${preco}</p>
       <p className="text-black/75 text-sm">até 6x de R${parcela} sem juros</p>
       <p className="text-center text-sm">R${precoDesc} no pix/boleto com 10% de desconto </p>
-      <Link href="#" target="_blank" className="bg-blue-500 px-5 py-2 my-2 text-white rounded">
-      <FontAwesomeIcon icon={faShareAlt} className="mr-2"/> 
+      <Link href="#" target="_blank" className="bg-white px-5 py-2 my-2 text-black/75 hover:text-white hover:bg-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded">
+      <FontAwesomeIcon icon={faShareSquare} className="mr-2"/> 
       Compartilhar 
       </Link>
       <span
-        className=" flex justify-center items-center bg-cyan-500/70  absolute w-full top-0 left-0 rounded-xl h-0 group-hover:h-[50%] transition-[height] ease duration-300 "
+        className=" flex justify-center items-center bg-blue-500/70  absolute w-full top-0 left-0 rounded-xl h-0 group-hover:h-[50%] transition-[height] ease duration-300 "
       >
         <Link href={href}
           initial={{ scale: 1 }}

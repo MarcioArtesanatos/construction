@@ -3,7 +3,7 @@ import logo from "../../../public/logo192.png"
 import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
 
@@ -28,7 +28,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-5 mr-20">
           <Link href="#" className="hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faPhone} className="text-2xl" /> Telefone:(35)3331-5656</Link>
-          <Link href="#" className="hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl " /> Whatsapp:(35)9999-9898</Link>
+          <Link href="#" className="hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl " /> Whatsapp:+55 35 9121-6423</Link>
           <Link href="#" className="hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faEnvelope} className="text-2xl" /> Email:marcio@gmail.com</Link>
         </div>
         <div className="flex flex-col justify-center items-center gap-5">
@@ -38,9 +38,8 @@ export default function Footer() {
           <h2 className="uppercase font-bold">Redes Sociais</h2>
           <div className="flex gap-2">
             <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faInstagram} /></Link>
-            <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faInstagram} /></Link>
-            <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faInstagram} /></Link>
-            <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faInstagram} /></Link>
+            <Link href="#" className="text-2xl hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faFacebook} /></Link>
+             
           </div>
         </div>
 
