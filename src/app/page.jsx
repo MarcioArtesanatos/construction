@@ -8,6 +8,8 @@ import girafa from "../../public/girafa.jpeg"
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCreditCard, faShield, faShieldAlt, faTruckFast } from '@fortawesome/free-solid-svg-icons';
+import Blog from './components/Blog';
+import Despoimentos from './components/Depoimentos';
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
@@ -68,7 +70,6 @@ export default function Home() {
               <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
               <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
-
             </div>
 
             <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Mais comprados</h2>
@@ -78,11 +79,54 @@ export default function Home() {
               <Card title="Futebol" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
               <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
-
             </div>
           </div>
         </div>
       </main>
+      <div className='flex flex-col w-screen justify-center items-center p-16'>
+        <h2 className='text-4xl text-black/75 font-bold py-5'>Depoimentos</h2>
+        <div className='flex flex-wrap justify-center'>
+          <Despoimentos
+            text="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas? "
+            foto={elicoptero}
+            name="José lorem Y"
+            cidade="São Lourenço"
+          />
+          <Despoimentos
+            text="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas? "
+            foto={elicoptero}
+            name="José lorem Y"
+            cidade="São Lourenço"
+          />
+          <Despoimentos
+            text="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas? "
+            foto={elicoptero}
+            name="José lorem Y"
+            cidade="São Lourenço"
+          />
+        </div>
+      </div>
+
+      <div className='flex flex-col w-screen justify-center items-center p-16'>
+        <h2 className='text-4xl text-black/75 font-bold'>Blog</h2>
+        <div className='flex flex-wrap justify-center'>
+          <Blog
+            link={lapis}
+            title="lorem"
+            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cupiditate delectus odio architecto repudiandae officia expedita, quia, minima debitis voluptas nesciunt est et animi libero aperiam similique dicta. Cum, amet?"
+          />
+          <Blog
+            link={lapis}
+            title="lorem"
+            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cupiditate delectus odio architecto repudiandae officia expedita, quia, minima debitis voluptas nesciunt est et animi libero aperiam similique dicta. Cum, amet?"
+          />
+          <Blog
+            link={lapis}
+            title="lorem"
+            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cupiditate delectus odio architecto repudiandae officia expedita, quia, minima debitis voluptas nesciunt est et animi libero aperiam similique dicta. Cum, amet?"
+          />
+        </div>
+      </div>
     </div>
   );
 }
