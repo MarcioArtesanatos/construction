@@ -87,19 +87,19 @@ export default function Home() {
         <h2 className='text-4xl text-black/75 font-bold py-5'>Depoimentos</h2>
         <div className='flex flex-wrap justify-center'>
           <Despoimentos
-            text="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas? "
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
             foto={elicoptero}
             name="José lorem Y"
             cidade="São Lourenço"
           />
           <Despoimentos
-            text="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas? "
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
             foto={elicoptero}
             name="José lorem Y"
             cidade="São Lourenço"
           />
           <Despoimentos
-            text="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas? "
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
             foto={elicoptero}
             name="José lorem Y"
             cidade="São Lourenço"
