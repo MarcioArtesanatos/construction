@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCreditCard, faShield, faShieldAlt, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import Blog from './components/Blog';
 import Despoimentos from './components/Depoimentos';
+import CarrosselMobile from './components/CarrosselMobile';
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
@@ -25,11 +26,18 @@ export default function Home() {
   return (
     <div className="">
 
-      <Carrossel />
-      <main className='bg-light w-full  py-20'>
-        <div className='flex justify-center items-center'>
+      <div className='md:hidden'>
+        <Carrossel />
+      </div>
+      <div className='hidden md:block'>
+        <CarrosselMobile/>
+      </div>
 
-          <div className=' mx-16 mb-16  flex justify-center items-center'>
+
+      <main className='bg-light w-full py-20'>
+        <div className='flex md:flex-col justify-center items-center'>
+
+          <div className=' mx-16 mb-16 flex justify-center items-center'>
             <FontAwesomeIcon icon={faTruckFast} className='h-6 text-blue-500 mr-2' />
             <div>
               <h2 className='text-blue-500 font-bold text-lg'>Entrega Rápida</h2>
@@ -52,11 +60,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=' px-16 w-full h-auto flex'>
+        <div className='px-16 md:px-5 w-full h-auto flex text-center'>
 
           <div className=' w-full rounded-xl flex justify-center items-center flex-col'>
             <h2 className='text-black/75 font-bold py-10 text-4xl '>Compre por Categoria</h2>
-            <div className='flex gap-5'>
+            <div className='flex md:flex-col gap-5'>
               <CardIdade idade="0 - 24" diaMes="Mês" link="/por-idade" />
               <CardIdade idade="3 - 5" diaMes="Anos" link="/por-idade" />
               <CardIdade idade="5 - 7" diaMes="Anos" link="/por-idade" />
@@ -85,7 +93,7 @@ export default function Home() {
       </main>
       <div className='flex flex-col w-screen justify-center items-center p-16'>
         <h2 className='text-4xl text-black/75 font-bold py-5'>Depoimentos</h2>
-        <div className='flex flex-wrap justify-center'>
+        <div className='flex md:gap-5 flex-wrap justify-center'>
           <Despoimentos
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
             foto={elicoptero}

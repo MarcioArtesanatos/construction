@@ -20,7 +20,7 @@ export default function Carrossel() {
     <div className="pb-10">
 
       <Swiper
-        spaceBetween={30}
+        spaceBetween={90}
         centeredSlides={true}
         loop={true}
         autoplay={{
@@ -51,25 +51,25 @@ export default function Carrossel() {
 
         </div>
         <SwiperSlide className='!flex !justify-center !items-center gap-36'>
-        <div className="flex flex-col gap-5 ml-20">
-            <h2 className="text-white font-bold text-7xl">Brinquedo X</h2>
+          <div className="flex flex-col gap-5 ml-20">
+            <h2 className="text-white font-bold text-7xl md:text-xl">Brinquedo X</h2>
             <button className="bg-white rounded-lg w-44">Preço</button>
           </div>
-          <Image src={girafa} alt='brinquedo' width={400} className="" />
+          <Image src={girafa} alt='brinquedo' className="w-96 md:w-44" />
         </SwiperSlide>
         <SwiperSlide className='!flex !justify-center !items-center gap-44'>
           <div className="flex flex-col gap-5 ml-20">
             <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
             <button className="bg-light rounded-lg w-44">Preço</button>
           </div>
-          <Image src={elicoptero} alt='brinquedo' width={400} />
+          <Image src={elicoptero} alt='brinquedo' className="w-96 md:w-44" />
         </SwiperSlide>
         <SwiperSlide className='!flex !justify-center !items-center gap-44'>
           <div className="flex flex-col gap-5 ml-20">
-            <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
+            <h2 className="text-light font-bold text-7xl md:text-xl">Brinquedo X</h2>
             <button className="bg-light rounded-lg w-44">Preço</button>
           </div>
-          <Image src={futebol} alt='brinquedo' width={400} />
+          <Image src={futebol} alt='brinquedo' className="w-96 md:w-44" />
         </SwiperSlide>
 
       </Swiper>
