@@ -17,7 +17,7 @@ import Image from 'next/image';
 
 export default function Carrossel() {
   return (
-    <div className="pb-10">
+    <div className="pb-10 mt-10">
 
       <Swiper
         spaceBetween={0}
@@ -36,7 +36,7 @@ export default function Carrossel() {
 
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper w-[90%] h-[500px] mt-10"
+        className="mySwiper w-[90%] h-[560px] pt-10"
         style={{
           // Adicione o estilo inline para alterar a cor da bolinha de paginação
           "--swiper-pagination-color": "#f5f5f5",
@@ -55,21 +55,21 @@ export default function Carrossel() {
             <h2 className="text-white font-bold text-7xl md:text-xl">Brinquedo X</h2>
             <button className="bg-white rounded-lg w-44">Preço</button>
           </div>
-          <Image src={girafa} alt='brinquedo' className="w-96 md:w-44" />
+          <Image src={girafa} alt='brinquedo' className="w-[500px] md:w-44 drop-shadow-dark1" />
         </SwiperSlide>
         <SwiperSlide className='!flex !justify-center !items-center gap-10'>
           <div className="flex flex-col gap-5 ml-20">
             <h2 className="text-light font-bold text-7xl">Brinquedo X</h2>
             <button className="bg-light rounded-lg w-44">Preço</button>
           </div>
-          <Image src={elicoptero} alt='brinquedo' className="w-96 md:w-44" />
+          <Image src={girafa} alt='brinquedo' className="w-[500px] md:w-44 drop-shadow-dark1" />
         </SwiperSlide>
         <SwiperSlide className='!flex !justify-center !items-center gap-10'>
           <div className="flex flex-col gap-5 ml-20">
             <h2 className="text-light font-bold text-7xl md:text-xl">Brinquedo X</h2>
             <button className="bg-light rounded-lg w-44">Preço</button>
           </div>
-          <Image src={futebol} alt='brinquedo' className="w-96 md:w-44" />
+          <Image src={girafa} alt='brinquedo' className="w-[500px] md:w-44 drop-shadow-dark1" />
         </SwiperSlide>
 
       </Swiper>

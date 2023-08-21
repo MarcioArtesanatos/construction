@@ -16,6 +16,7 @@ module.exports = {
       },
       dropShadow: {
         dark: "0.35rem 0.35rem 0.2rem rgba(0, 0, 0, 0.5)",
+        dark1: "0rem 0rem 2rem #FFFFFF",
       },
 
       backgroundImage: {
