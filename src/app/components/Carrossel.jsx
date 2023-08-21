@@ -1,7 +1,7 @@
 "use client"
-import girafa from "../../../public/girafa.jpeg"
 import elicoptero from "../../../public/elicoptero.jpeg"
 import futebol from "../../../public/futebol.jpeg"
+import girafa from "../../../public/girafa.png"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
