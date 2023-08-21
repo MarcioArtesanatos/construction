@@ -27,13 +27,16 @@ const CardIdade = ({ idade, diaMes, link }) => {
 export default function Home() {
   return (
     <div className="relative">
-      <Image src={bg} alt='nuven de fundo do site' className="absolute -top-10 -z-10 h-"
-      /> 
-      <div className='md:hidden'>
+      <div className='w-screen h-screen'>
+        <Image src={bg} alt='nuven de fundo do site' className="absolute -top-10 -z-10 h-"
+        />
+        <div className='md:hidden'>
         <Carrossel />
       </div>
+      </div>
+      
       <div className='hidden md:block'>
-        <CarrosselMobile/>
+        <CarrosselMobile />
       </div>
 
       <main className='bg-light w-full py-20'>
