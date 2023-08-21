@@ -28,7 +28,7 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 export default function NavBar() {
   return (
-    <div className="md:px-0">
+    <div className="md:px-0 bg-primary">
       <NavBarMobile />
       <div className=" md:hidden flex justify-between items-center px-5 bg-light relative">
         <div className="space-x-5 px-5">
