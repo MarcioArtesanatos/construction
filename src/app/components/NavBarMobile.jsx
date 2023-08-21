@@ -10,7 +10,7 @@ import {
     faHome,
     faCheese,
 } from '@fortawesome/free-solid-svg-icons'
-import logo from '../../../public/logo192.png'
+import logo from '../../../public/logo.png'
 
 import { useState } from 'react'
 import Image from 'next/image'

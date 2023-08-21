@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}

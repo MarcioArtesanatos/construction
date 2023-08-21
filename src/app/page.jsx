@@ -5,12 +5,14 @@ import elicoptero from "../../public/elicoptero.jpeg"
 import futebol from "../../public/futebol.jpeg"
 import lapis from "../../public/lapis.jpeg"
 import girafa from "../../public/girafa.jpeg"
+import bg from "../../public/bg.jpg"
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCreditCard, faShield, faShieldAlt, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import Blog from './components/Blog';
 import Despoimentos from './components/Depoimentos';
 import CarrosselMobile from './components/CarrosselMobile';
+import Image from 'next/image';
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
@@ -24,15 +26,15 @@ const CardIdade = ({ idade, diaMes, link }) => {
 
 export default function Home() {
   return (
-    <div className="">
-
+    <div className="relative">
+      <Image src={bg} alt='nuven de fundo do site' className="absolute -top-10 -z-10 h-"
+      /> 
       <div className='md:hidden'>
         <Carrossel />
       </div>
       <div className='hidden md:block'>
         <CarrosselMobile/>
       </div>
-
 
       <main className='bg-light w-full py-20'>
         <div className='flex md:flex-col justify-center items-center'>

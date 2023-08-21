@@ -20,16 +20,15 @@ export default function CarrosselCompra({ primeira, segunda, terceira, title }) 
     return (
         <div className='pr-5'>
             <Swiper
-                style={{
-                    '--swiper-navigation-color': '#fff',
-                    '--swiper-pagination-color': '#fff',
-                }}
                 loop={true}
                 spaceBetween={10}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2 w-96 h-full styles.swiper mb-5 "
+                className="mySwiper2 w-96 h-full styles.swiper mb-5"
+                style={{
+                    "--swiper-pagination-color": "#28437A",
+                }}
             >
                 <SwiperSlide className='text-center text-xl bg-white flex justify-center items-center round'>
                     <Image src={primeira} alt={title} className='w-full h-full object-cover '/>
