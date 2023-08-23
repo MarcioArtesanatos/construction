@@ -76,15 +76,16 @@ export default function Home() {
               <CardIdade idade="7 - 9" diaMes="Anos" link="/por-idade" />
               <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade" />
             </div>
-            <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Novos Produtos</h2>
-            <div className='py-5 flex flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
-              <Card title="Helicóptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
-              <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
-              <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
-              <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
+            <div className='bg-primaryDark w-screen mt-10'>
+              <h2 className='uppercase mt-24 text-white font-bold pb-10 text-4xl '>Novos Produtos</h2>
+              <div className='py-5 flex flex-wrap w-full items-center justify-center'>
+                <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+                <Card title="Helicóptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+                <Card title="Futebol" preco="10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
+                <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />
+                <Card title="Lápis" preco="10,00" precoDesc="10,00" parcela="10,00" link={lapis} href="compra" />
+              </div>
             </div>
-
             <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Mais comprados</h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
               <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
@@ -96,9 +97,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className='flex flex-col w-screen justify-center items-center p-16'>
-        <h2 className='text-4xl text-black/75 font-bold py-5'>Depoimentos</h2>
-        <div className='flex md:gap-5 flex-wrap justify-center'>
+      <div className='flex flex-col w-screen justify-center items-center p-16 bg-primaryDark'>
+        <h2 className='text-4xl text-white font-bold pb-10'>Depoimentos</h2>
+        <div className='flex gap-5 flex-wrap justify-center'>
           <Despoimentos
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
             foto={elicoptero}
