@@ -1,5 +1,5 @@
 "use client"
-import elicoptero from "../../../public/elicoptero.jpeg"
+import elicoptero from "../../../public/girafa.png"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
