@@ -49,7 +49,7 @@ export default function NavBar() {
           </button>
         </div>
       </div>
-      <nav className="flex justify-center items-center">
+      <nav className="md:hidden flex justify-center items-center">
           <CustomLink href="/" title="Inicio" className="ml-4" />
           <CustomLink href="#" title="Sobre" className="mx-4" />
           <CustomLink href="#" title="Lorem" className="mx-4" />

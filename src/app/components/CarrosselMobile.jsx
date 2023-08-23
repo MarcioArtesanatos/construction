@@ -9,13 +9,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, } from 'swiper/modules';
 import Image from 'next/image';
 
 
 export default function CarrosselMobile() {
     return (
-        <div className="pb-10">
+        <div className="pb-10 flex justify-center items-center w-screen">
 
             <Swiper
                 spaceBetween={0}
@@ -30,7 +30,7 @@ export default function CarrosselMobile() {
                 }}
 
                 modules={[Autoplay, Pagination]}
-                className="mySwiper h-[500px] "
+                className="mySwiper h-[500px] w-96 absolute top-0"
                 style={{
                     // Adicione o estilo inline para alterar a cor da bolinha de paginação
                     "--swiper-pagination-color": "#f5f5f5",

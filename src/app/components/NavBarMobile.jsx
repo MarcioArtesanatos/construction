@@ -75,14 +75,7 @@ export default function NavBarMobile() {
                     <FontAwesomeIcon icon={faComments} className="h-5 text-vermelho" />
                     <p>Atendimento</p>
                 </Link>
-                <Link
-                    href="quem-somos"
-                    className=" text-yellow1 flex cursor-pointer items-center space-x-5 p-2 pl-5 text-sm font-semibold text-vermelho shadow-lg duration-300 ease-in-out hover:text-light"
-                    onClick={() => setShowSidebar(!showSidebar)}
-                >
-                    <FontAwesomeIcon icon={faCheese} className="h-5 text-vermelho" />
-                    <p>Produtos</p>
-                </Link>
+                
                 <Link
                     href="/carrinho"
                     className=" text-yellow1 flex cursor-pointer items-center space-x-5 p-2 pl-5 text-sm font-semibold text-vermelho shadow-lg duration-300 ease-in-out hover:text-light"
