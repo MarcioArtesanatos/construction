@@ -28,14 +28,14 @@ export default function Home() {
   return (
     <div className="relative">
       <div className='w-screen md:h-[800px] h-[1200px] '>
-        <Image src={bg} alt='nuven de fundo do site' className="absolute -top-11 -z-10 md:h-[600px] h-[1200px] "
+        <Image src={bg} alt='nuven de fundo do site' className="absolute -top-11 -z-10 md:h-[500px] h-[1200px] "
         />
         <div className='md:hidden'>
           <Carrossel />
         </div>
       </div>
 
-      <div className='hidden md:block w-screen h-[760px] -mt-[800px]'>
+      <div className='hidden md:block w-screen h-[760px] -mt-[900px]'>
         <CarrosselMobile />
       </div>
 
