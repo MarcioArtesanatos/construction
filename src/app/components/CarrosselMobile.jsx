@@ -30,7 +30,7 @@ export default function CarrosselMobile() {
                 }}
 
                 modules={[Autoplay, Pagination]}
-                className="mySwiper h-[500px] w-96 absolute top-0"
+                className="mySwiper h-[400px] w-96 absolute top-0"
                 style={{
                     // Adicione o estilo inline para alterar a cor da bolinha de paginação
                     "--swiper-pagination-color": "#f5f5f5",
@@ -39,20 +39,26 @@ export default function CarrosselMobile() {
 
                 <SwiperSlide className='!flex !justify-center !items-center'>
                     <div className="flex flex-col justify-center items-center">
-                        <Image src={elicoptero} className="w-[90%]" />
-                        <button className="bg-white rounded p-2 mt-2 w-24">Comprar</button>
+                        <Image src={elicoptero} className="w-[90%] drop-shadow-dark" />
+                        <button className="bg-white rounded p-2 mt-2 w-24 drop-shadow-dark font-bold text-blue-500">
+                            Comprar
+                        </button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='!flex !justify-center !items-center'>
                     <div className="flex flex-col justify-center items-center">
-                        <Image src={elicoptero} className="w-[90%]" />
-                        <button className="bg-white rounded p-2 mt-2 w-24">Comprar</button>
+                        <Image src={elicoptero} className="w-[90%] drop-shadow-dark" />
+                        <button className="bg-white rounded p-2 mt-2 w-24 drop-shadow-dark font-bold text-blue-500">
+                            Comprar
+                        </button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='!flex !justify-center !items-center'>
                     <div className="flex flex-col justify-center items-center">
-                        <Image src={elicoptero} className="w-[90%]" />
-                        <button className="bg-white rounded p-2 mt-2 w-24">Comprar</button>
+                        <Image src={elicoptero} className="w-[90%] drop-shadow-dark" />
+                        <button className="bg-white rounded p-2 mt-2 w-24 drop-shadow-dark font-bold text-blue-500">
+                            Comprar
+                        </button>
                     </div>
                 </SwiperSlide>
             </Swiper>

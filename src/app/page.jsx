@@ -16,7 +16,7 @@ import Image from 'next/image';
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
-    <Link href={link} className='border-dashed border-4 border-blue-500 hover:border-white text-blue-500 p-10 md:p-2 text-4xl text-center font-black font-lobster hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white transition-all duration-300 md:flex md:gap-2'>
+    <Link href={link} className='border-dashed border-4 border-blue-500 hover:border-white text-blue-500 p-10 md:p-2 text-4xl text-center font-black font-lobster hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white transition-all duration-300 md:first-letter:flex md:gap-2'>
       <h2>{idade}</h2>
       <p>{diaMes}</p>
     </Link>
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='hidden md:block w-screen h-[760px] -mt-[900px]'>
+      <div className='hidden md:block w-screen h-[760px] -mt-[800px]'>
         <CarrosselMobile />
       </div>
 
