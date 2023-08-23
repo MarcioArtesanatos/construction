@@ -40,7 +40,7 @@ export default function NavBar() {
           <Link href="#" className="flex justify-center items-center hover:text-blue-500 transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />+55 35 9121-6423</Link>
         </div>
       </div>
-      <div className="w-full flex justify-around items-center rounded-xl mt-5 pb-5 md:hidden px-5">
+      <div className="w-screen flex justify-center items-center rounded-xl mt-5 pb-5 md:hidden space-x-10">
         <Image src={logo} alt="logo da empresa" className=" w-48" />
         <div className="flex justify-center items-center">
           <input type="text" className="rounded-s-2xl px-5 py-2" placeholder="Pesquisar" />
@@ -49,17 +49,19 @@ export default function NavBar() {
           </button>
         </div>
         <div className="space-x-8">
-        <FontAwesomeIcon icon={faShoppingCart} className="text-white h-8" />
-        <FontAwesomeIcon icon={faUserAlt} className="text-white h-8" />
-        
+          <FontAwesomeIcon icon={faShoppingCart} className="text-white h-8" />
+          <FontAwesomeIcon icon={faUserAlt} className="text-white h-8" />
+
         </div>
       </div>
-      <nav className="md:hidden flex justify-center items-center">
-          <CustomLink href="/" title="Inicio" className="ml-4" />
-          <CustomLink href="#" title="Sobre" className="mx-4" />
-          <CustomLink href="#" title="Lorem" className="mx-4" />
-          <CustomLink href="#" title="Lorem" className="mx-4" />
-        </nav>
+      <nav className="w-screen md:hidden flex justify-center gap-10 items-center">
+        <CustomLink href="/" title="Inicio" />
+        <CustomLink href="#" title="Sobre" />
+        <CustomLink href="#" title="Lorem" />
+        <CustomLink href="#" title="Lorem" />
+        <CustomLink href="#" title="Lorem" />
+        <CustomLink href="#" title="Lorem" />
+      </nav>
     </div>
   )
 }

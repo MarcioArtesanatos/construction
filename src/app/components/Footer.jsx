@@ -1,5 +1,6 @@
 import Image from "next/image"
 import logo from "../../../public/logo.png"
+import rixxer from "../../../public/rixxer.png"
 import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -13,7 +14,7 @@ export default function Footer() {
         <div className="flex flex-col justify-center items-center w-screen">
             <div className="bg-primary p-16 md:p-2 md:py-5 flex md:flex-col justify-around w-screen text-light md:space-y-5">
                 <div className="flex flex-col justify-center items-center mb-10 md:mb-0">
-                    <Image src={logo} width={100} />
+                    <Image src={logo} className="w-48" />
                     <p className="w-64 md:w-auto text-justify text-sm mt-5 ">Descubra o incrível universo lúdico da Marcio Artezanatos! Loja especializada em produtos sustentáveis e produzidos por empresas brasileiras, resgatamos memórias e histórias, proporcionando aprendizagens significativas para todas as idades. Com jogos, brinquedos em madeira, livros e quebra-cabeças, estimulamos a imaginação, criatividade e o desenvolvimento integral das crianças. Venha explorar nosso mundo encantado e transforme o aprendizado em uma experiência mágica.</p>
                 </div>
                 <div className="flex flex-col mt-0 space-y-5 md:text-center">
@@ -63,8 +64,8 @@ export default function Footer() {
                 </p>
                 <div className="flex">
                     <p className="text-sm">Developed by&nbsp; </p>{' '}
-                    <a href="" className="font-bold text-light hover:text-secondary transition ease-in-out duration-300">
-                        Rixxer &trade;
+                    <a href="" className="font-bold text-light hover:text-secondary transition ease-in-out duration-300 flex justify-center items-center">
+                        <Image src={rixxer} alt="logo da emrpesa rixxer desenolvedora do site" className="w-14 mx-2"/>
                     </a>
                 </div>
             </div>
