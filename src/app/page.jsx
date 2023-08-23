@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className='w-screen md:h-[800px] h-[1200px] '>
-        <Image src={bg} alt='nuven de fundo do site' className="absolute -top-11 -z-10 md:h-[400px] h-[1200px] "
+        <Image src={bg} alt='nuven de fundo do site' className="absolute -top-11 -z-10 md:h-[300px] h-[1200px] "
         />
         <div className='md:hidden'>
           <Carrossel />
