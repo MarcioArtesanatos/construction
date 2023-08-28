@@ -7,7 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 
-export default function Card({ preco, parcela, precoDesc, link, title, href }) {
+export default function Card({ preco, parcela, precoDesc, link, title, href, className = "", }) {
 
   const [isTapped, setIsTapped] = useState(false);
   const [isTapped1, setIsTapped1] = useState(false);
@@ -19,7 +19,7 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className="group bg-light/40 mr-5 mb-5 md:mr-0 flex flex-col w-64 md:w-80 h-[520px] md:h-[580px] p-5 rounded-xl relative felx justify-center items-center">
+    <div className={`group bg-blue-100 mr-5 mb-5 md:mr-0 flex flex-col w-64 md:w-80 h-[520px] md:h-[580px] p-10 rounded-xl relative felx justify-center items-center ${className}`}>
       <div className="relative">
         <Image src={link} alt={title} height={300} className="rounded-xl" />
 
@@ -52,14 +52,14 @@ export default function Card({ preco, parcela, precoDesc, link, title, href }) {
           </motion.button>
         </span>
       </div>
-<div className="space-y-2 flex flex-col justify-center items-center">
-      <h2 className="my-5 font-bold text-2xl">{title}</h2>
-      <p className="text-lg font-bold">R${preco}</p>
-      <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
-      <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p>
+      <div className="space-y-2 flex flex-col justify-center items-center">
+        <h2 className="my-5 font-bold text-2xl">{title}</h2>
+        <p className="text-lg font-bold">R${preco}</p>
+        <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
+        <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p>
       </div>
       <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-10">
-        
+
         <FontAwesomeIcon icon={faShareSquare} className="mr-2" />
         Compartilhar
       </Link>

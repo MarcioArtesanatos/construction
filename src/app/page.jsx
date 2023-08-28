@@ -76,8 +76,8 @@ export default function Home() {
               <CardIdade idade="7 - 9" diaMes="Anos" link="/por-idade" />
               <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade" />
             </div>
-            <div className='bg-primaryDark w-screen mt-10'>
-              <h2 className='uppercase mt-24 text-white font-bold pb-10 text-4xl '>Novos Produtos</h2>
+            <div className='bg-gradient-to-r w-screen mt-10'>
+              <h2 className='uppercase mt-24 text-black/75 font-bold pb-10 text-4xl '>Novos Produtos</h2>
               <div className='py-5 flex flex-wrap w-full items-center justify-center'>
                 <Card title="Caminhão" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
                 <Card title="Helicóptero" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
@@ -88,7 +88,7 @@ export default function Home() {
             </div>
             <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Mais comprados</h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
+              <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra"/>
               <Card title="Elicoptero" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />

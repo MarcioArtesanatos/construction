@@ -31,9 +31,9 @@ export default function NavBar() {
     <div className="md:px-0 bg-primary">
       <NavBarMobile />
       <div className=" md:hidden flex justify-between items-center px-5 bg-light relative">
-        <div className="space-x-5 px-5">
-          <Link href="#" className="text-2xl text-black/75 hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faInstagram} /></Link>
-          <Link href="#" className="text-2xl text-black/75 hover:text-blue-500 transition-all duration-300"><FontAwesomeIcon icon={faFacebook} /></Link>
+        <div className="space-x-5 p-2 divide-primary/75 divide-x flex">
+          <Link href="#" className="text-black/75 hover:text-blue-500 transition-all duration-300 flex justify-center items-center"><FontAwesomeIcon icon={faInstagram} className="mr-2" />Instagram</Link>
+          <Link href="#" className="flex justify-center items-center text-black/75 hover:text-blue-500 transition-all duration-300 pl-5"><FontAwesomeIcon icon={faFacebook} className="mr-2" />Facebook</Link>
         </div>
 
         <div>
@@ -51,7 +51,6 @@ export default function NavBar() {
         <div className="space-x-8">
           <FontAwesomeIcon icon={faShoppingCart} className="text-white h-8" />
           <FontAwesomeIcon icon={faUserAlt} className="text-white h-8" />
-
         </div>
       </div>
       <nav className="w-screen md:hidden flex justify-center gap-10 items-center">
