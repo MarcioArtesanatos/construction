@@ -62,10 +62,10 @@ export default function NavBar() {
           </div>
           <div className=" cursor-pointer">
             <Link href="/carrinho">
-              <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+              <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-6 p-4 hover:text-primaryDark transition-all duration-300" />
             </Link>
             <Link href="/conta">
-              <FontAwesomeIcon icon={faUserCircle} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+              <FontAwesomeIcon icon={faUserCircle} className="text-primary h-6 p-4 hover:text-primaryDark transition-all duration-300" />
             </Link>
           </div>
 
