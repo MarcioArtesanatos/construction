@@ -26,7 +26,7 @@ export default function Footer() {
                     <Link href="/politica-de-privacidade" className="hover:text-light transition-all duration-300">
                         Política de Privaciade
                     </Link>
-                    <Link href="politica-de-troca-devolucao" className="hover:text-light transition-all duration-300">
+                    <Link href="politica-de-troca-e-devolucao" className="hover:text-light transition-all duration-300">
                         Nossas Políticas de troca e devolução
                     </Link>
                     <Link href="quem-somos"

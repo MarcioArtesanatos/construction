@@ -14,7 +14,8 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 
   return (
-    <Link href={href} className={`${className} group relative z-10 text-black/80 font-bold `}>
+    <Link href={href} className={`${className} group relative z-10  font-bold 
+    ${pathname === href ? "text-primaryDark" : "text-black/75"}`}>
       {title}
       <span
         className={`h-px inline-block bg-primaryDark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${pathname === href ? "w-full" : "w-0"
@@ -59,11 +60,10 @@ export default function NavBar() {
       </div>
       <nav className="w-screen md:hidden flex justify-center gap-10 items-center pb-5 bg-light">
         <CustomLink href="/" title="Inicio" />
-        <CustomLink href="#" title="Sobre" />
-        <CustomLink href="#" title="Lorem" />
-        <CustomLink href="#" title="Lorem" />
-        <CustomLink href="#" title="Lorem" />
-        <CustomLink href="#" title="Lorem" />
+        <CustomLink href="/quem-somos" title="Sobre" />
+        <CustomLink href="#" title="Produtos" />
+        <CustomLink href="/fale-conosco" title="Contato" />
+
       </nav>
     </div>
   )
