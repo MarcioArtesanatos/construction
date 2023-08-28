@@ -1,6 +1,7 @@
 "use client"
 import Carrossel from './components/Carrossel';
 import Card from './components/Card';
+import bgCrianca from "../../public/bgCrianca.jpg"
 import elicoptero from "../../public/elicoptero.jpeg"
 import futebol from "../../public/futebol.jpeg"
 import lapis from "../../public/lapis.jpeg"
@@ -27,40 +28,41 @@ const CardIdade = ({ idade, diaMes, link }) => {
 export default function Home() {
   return (
     <div className="relative">
-      <div className='w-screen md:h-[800px] h-[1200px] '>
-        <Image src={bg} alt='nuven de fundo do site' className="absolute -top-11 -z-10 md:h-[300px] h-[1200px] "
-        />
-        <div className='md:hidden'>
-          <Carrossel />
-        </div>
+      <div className='w-screen '>
+        {/* <Image src={bg} alt='nuven de fundo do site' className="absolute -top-11 -z-10 md:h-[300px] h-[1200px]"
+        />*/}
+
       </div>
 
-      <div className='hidden md:block w-screen h-[760px] -mt-[800px]'>
+      {/* <div className='hidden md:block w-screen h-[760px] -mt-[800px]'>
         <CarrosselMobile />
+      </div>*/}
+      <div className='bg-black'>
+        {/*<Carrossel />*/}
+        <Image src={bgCrianca} alt='desenho de crianças brincando com brinquedos de madeira' className='opacity-70' />
       </div>
+      <main className='bg-light w-full pt-10'>
+        <div className='flex md:flex-col justify-center items-center gap-5 '>
 
-      <main className='bg-light w-full py-20 -mt-60'>
-        <div className='flex md:flex-col justify-center items-center'>
-
-          <div className=' mx-16 mb-16 flex justify-center items-center'>
-            <FontAwesomeIcon icon={faTruckFast} className='h-6 text-blue-500 mr-2' />
+          <div className=' mb-16 flex justify-center items-center border border-solid rounded-lg border-primaryDark px-10 py-5'>
+            <FontAwesomeIcon icon={faTruckFast} className='h-10 text-blue-500 mr-2' />
             <div>
-              <h2 className='text-blue-500 font-bold text-lg'>Entrega Rápida</h2>
-              <p className='text-black/75 text-sm -mt-1'>Para tado Brasil</p>
+              <h2 className='text-blue-500 font-bold text-3xl flex'>Entrega Rápida</h2>
+              <p className='text-black/75 text-sm -mt-1 text-center'>Para tado Brasil</p>
             </div>
           </div>
-          <div className='mx-16 mb-16 flex justify-center items-center'>
-            <FontAwesomeIcon icon={faCreditCard} className='h-6 text-blue-500 mr-2' />
+          <div className=' mb-16 flex justify-center items-center px-10 py-5 border border-solid rounded-lg border-primaryDark'>
+            <FontAwesomeIcon icon={faCreditCard} className='h-10 text-blue-500 mr-2' />
             <div>
-              <h2 className='text-blue-500 font-bold text-lg'>Parcelamento</h2>
-              <p className='text-black/75 text-sm -mt-1'>Em até 6x sem juros</p>
+              <h2 className='text-blue-500 font-bold text-3xl'>Parcelamento</h2>
+              <p className='text-black/75 text-sm -mt-1 text-center'>Em até 6x sem juros</p>
             </div>
           </div>
-          <div className='mx-16 mb-16 flex justify-center items-center'>
-            <FontAwesomeIcon icon={faShieldAlt} className='h-6 text-blue-500 mr-2' />
+          <div className=' mb-16 flex justify-center items-center px-10 py-5 border border-solid rounded-lg border-primaryDark'>
+            <FontAwesomeIcon icon={faShieldAlt} className='h-10 text-blue-500 mr-2' />
             <div>
-              <h2 className='text-blue-500 font-bold text-lg'>Loja Segura</h2>
-              <p className='text-black/75 text-sm -mt-1'>Selo SSL de proteção</p>
+              <h2 className='text-blue-500 font-bold text-3xl'>Loja Segura</h2>
+              <p className='text-black/75 text-sm -mt-1 text-center'>Selo SSL de proteção</p>
             </div>
           </div>
         </div>
@@ -88,7 +90,7 @@ export default function Home() {
             </div>
             <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>Mais comprados</h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
-              <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra"/>
+              <Card title="Caminhão" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Elicoptero" preco="10,00" precoDesc="10,00" parcela="10,00" link={elicoptero} href="compra" />
               <Card title="Futebol" preco=" 10,00" precoDesc="10,00" parcela="10,00" link={futebol} href="compra" />
               <Card title="Girafa" preco="10,00" precoDesc="10,00" parcela="10,00" link={girafa} href="compra" />

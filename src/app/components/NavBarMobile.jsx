@@ -30,7 +30,7 @@ export default function NavBarMobile() {
                 <svg
                     onClick={() => setShowSidebar(!showSidebar)}
                     className="flex justify-center items-center cursor-pointer "
-                    fill="#ffffff"
+                    fill="#4978BF"
                     viewBox="0 0 100 50"
                     width="30"
                     height="30"

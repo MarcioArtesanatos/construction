@@ -14,7 +14,7 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 
   return (
-    <Link href={href} className={`${className} group relative z-10 text-primary font-bold `}>
+    <Link href={href} className={`${className} group relative z-10 text-black/80 font-bold `}>
       {title}
       <span
         className={`h-px inline-block bg-primaryDark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${pathname === href ? "w-full" : "w-0"
@@ -40,22 +40,24 @@ export default function NavBar() {
           <Link href="#" className="flex justify-center items-center hover:text-blue-500 transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />+55 35 9121-6423</Link>
         </div>
       </div>
-      <div className="w-screen flex justify-center items-center rounded-xl mt-5 pb-5 md:hidden space-x-10">
-        <Link href="/">
-          <Image src={logo} alt="logo da empresa" className=" w-48" />
-        </Link>
-        <div className="flex justify-center items-center">
-          <input type="text" className="rounded-s-2xl px-5 py-2 border border-zinc-300" placeholder="Pesquisar" />
-          <button className="flex justify-center items-center hover:bg-primaryDark bg-primary rounded-e-2xl transition-all duration-300">
-            <FontAwesomeIcon icon={faSearch} className="text-light h-6 px-5 py-2" />
-          </button>
-        </div>
-        <div className=" cursor-pointer">
-          <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
-          <FontAwesomeIcon icon={faUserCircle} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+      <div className="w-screen flex justify-center items-center">
+        <div className=" w-[1000px] flex justify-between items-center p-5 pb-5 md:hidden space-x-10">
+          <Link href="/">
+            <Image src={logo} alt="logo da empresa" className=" w-48" />
+          </Link>
+          <div className="flex justify-center items-center">
+            <input type="text" className="rounded-s-full px-5 py-2 border border-zinc-300" placeholder="Pesquisar" />
+            <button className="border border-primary flex justify-center items-center hover:bg-primaryDark bg-primary rounded-e-full transition-all duration-300">
+              <FontAwesomeIcon icon={faSearch} className="text-light h-6 px-5 py-2" />
+            </button>
+          </div>
+          <div className=" cursor-pointer">
+            <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+            <FontAwesomeIcon icon={faUserCircle} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+          </div>
         </div>
       </div>
-      <nav className="w-screen md:hidden flex justify-center gap-10 items-center pb-5">
+      <nav className="w-screen md:hidden flex justify-center gap-10 items-center pb-5 bg-light">
         <CustomLink href="/" title="Inicio" />
         <CustomLink href="#" title="Sobre" />
         <CustomLink href="#" title="Lorem" />
