@@ -34,12 +34,12 @@ export default function NavBar() {
       <div className="fixed md:hidden  flex justify-between items-center px-5 bg-zinc-100 w-screen z-10 backdrop-blur-md  ">
         <div className="space-x-5 p-2 divide-primary/75 divide-x flex">
           <Link href="https://www.instagram.com/marcio.artesanatos.sl/"
-          target="_blank" className="text-black/75 hover:text-blue-500 transition-all duration-300 flex justify-center items-center">
+            target="_blank" className="text-black/75 hover:text-blue-500 transition-all duration-300 flex justify-center items-center">
             <FontAwesomeIcon icon={faInstagram} className="mr-2" />
             Instagram
           </Link>
-          <Link href="https://www.facebook.com/profile.php?id=100069674319618" 
-          target="_blank" className="flex justify-center items-center text-black/75 hover:text-blue-500 transition-all duration-300 pl-5">
+          <Link href="https://www.facebook.com/profile.php?id=100069674319618"
+            target="_blank" className="flex justify-center items-center text-black/75 hover:text-blue-500 transition-all duration-300 pl-5">
             <FontAwesomeIcon icon={faFacebook} className="mr-2" />
             Facebook
           </Link>

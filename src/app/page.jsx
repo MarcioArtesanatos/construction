@@ -48,7 +48,7 @@ export default function Home() {
             <FontAwesomeIcon icon={faTruckFast} className='h-10 text-blue-500 mr-2' />
             <div>
               <h2 className='text-blue-500 font-bold text-3xl flex'>Entrega Rápida</h2>
-              <p className='text-black/75 text-sm -mt-1 text-center'>Para tado Brasil</p>
+              <p className='text-black/75 text-sm -mt-1 text-center'>Para todo Brasil</p>
             </div>
           </div>
           <div className=' mb-16 flex justify-center items-center px-10 py-5 border border-solid rounded-lg border-primaryDark'>
