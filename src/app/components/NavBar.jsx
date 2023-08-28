@@ -7,17 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import NavBarMobile from "./NavBarMobile";
-import { faSearch, faShoppingCart, faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faShoppingCart, faUser, faUserAlt, faUserAstronaut, faUserCircle, faUserCog } from "@fortawesome/free-solid-svg-icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const pathname = usePathname();
 
 
   return (
-    <Link href={href} className={`${className} group relative z-10 text-light font-bold`}>
+    <Link href={href} className={`${className} group relative z-10 text-primary font-bold `}>
       {title}
       <span
-        className={`h-px inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${pathname === href ? "w-full" : "w-0"
+        className={`h-px inline-block bg-primaryDark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${pathname === href ? "w-full" : "w-0"
           }`}
       >
         &nbsp;
@@ -28,9 +28,9 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 export default function NavBar() {
   return (
-    <div className="md:px-0 bg-primary">
+    <div className="md:px-0 bg">
       <NavBarMobile />
-      <div className=" md:hidden flex justify-between items-center px-5 bg-light relative">
+      <div className=" md:hidden flex justify-between items-center px-5 bg-zinc-100 relative">
         <div className="space-x-5 p-2 divide-primary/75 divide-x flex">
           <Link href="#" className="text-black/75 hover:text-blue-500 transition-all duration-300 flex justify-center items-center"><FontAwesomeIcon icon={faInstagram} className="mr-2" />Instagram</Link>
           <Link href="#" className="flex justify-center items-center text-black/75 hover:text-blue-500 transition-all duration-300 pl-5"><FontAwesomeIcon icon={faFacebook} className="mr-2" />Facebook</Link>
@@ -41,19 +41,21 @@ export default function NavBar() {
         </div>
       </div>
       <div className="w-screen flex justify-center items-center rounded-xl mt-5 pb-5 md:hidden space-x-10">
-        <Image src={logo} alt="logo da empresa" className=" w-48" />
+        <Link href="/">
+          <Image src={logo} alt="logo da empresa" className=" w-48" />
+        </Link>
         <div className="flex justify-center items-center">
-          <input type="text" className="rounded-s-2xl px-5 py-2" placeholder="Pesquisar" />
-          <button className="flex justify-center items-center">
-            <FontAwesomeIcon icon={faSearch} className="text-blue-400 bg-white rounded-e-2xl h-6 px-5 py-2 ml-1" />
+          <input type="text" className="rounded-s-2xl px-5 py-2 border border-zinc-300" placeholder="Pesquisar" />
+          <button className="flex justify-center items-center hover:bg-primaryDark bg-primary rounded-e-2xl transition-all duration-300">
+            <FontAwesomeIcon icon={faSearch} className="text-light h-6 px-5 py-2" />
           </button>
         </div>
-        <div className="space-x-8">
-          <FontAwesomeIcon icon={faShoppingCart} className="text-white h-8" />
-          <FontAwesomeIcon icon={faUserAlt} className="text-white h-8" />
+        <div className=" cursor-pointer">
+          <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+          <FontAwesomeIcon icon={faUserCircle} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
         </div>
       </div>
-      <nav className="w-screen md:hidden flex justify-center gap-10 items-center">
+      <nav className="w-screen md:hidden flex justify-center gap-10 items-center pb-5">
         <CustomLink href="/" title="Inicio" />
         <CustomLink href="#" title="Sobre" />
         <CustomLink href="#" title="Lorem" />
