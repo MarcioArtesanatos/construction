@@ -31,17 +31,25 @@ export default function NavBar() {
   return (
     <div className="md:px-0 bg">
       <NavBarMobile />
-      <div className=" md:hidden flex justify-between items-center px-5 bg-zinc-100 relative">
+      <div className="fixed md:hidden  flex justify-between items-center px-5 bg-zinc-100 w-screen z-10 backdrop-blur-md  ">
         <div className="space-x-5 p-2 divide-primary/75 divide-x flex">
-          <Link href="#" className="text-black/75 hover:text-blue-500 transition-all duration-300 flex justify-center items-center"><FontAwesomeIcon icon={faInstagram} className="mr-2" />Instagram</Link>
-          <Link href="#" className="flex justify-center items-center text-black/75 hover:text-blue-500 transition-all duration-300 pl-5"><FontAwesomeIcon icon={faFacebook} className="mr-2" />Facebook</Link>
+          <Link href="https://www.instagram.com/marcio.artesanatos.sl/"
+          target="_blank" className="text-black/75 hover:text-blue-500 transition-all duration-300 flex justify-center items-center">
+            <FontAwesomeIcon icon={faInstagram} className="mr-2" />
+            Instagram
+          </Link>
+          <Link href="https://www.facebook.com/profile.php?id=100069674319618" 
+          target="_blank" className="flex justify-center items-center text-black/75 hover:text-blue-500 transition-all duration-300 pl-5">
+            <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+            Facebook
+          </Link>
         </div>
 
         <div>
           <Link href="#" className="flex justify-center items-center hover:text-blue-500 transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />+55 35 9121-6423</Link>
         </div>
       </div>
-      <div className="w-screen flex justify-center items-center">
+      <div className="w-screen flex justify-center items-center pt-10">
         <div className=" w-[1000px] flex justify-between items-center p-5 pb-5 md:hidden space-x-10">
           <Link href="/">
             <Image src={logo} alt="logo da empresa" className=" w-48" />
@@ -53,9 +61,14 @@ export default function NavBar() {
             </button>
           </div>
           <div className=" cursor-pointer">
-            <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
-            <FontAwesomeIcon icon={faUserCircle} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+            <Link href="/carrinho">
+              <FontAwesomeIcon icon={faShoppingCart} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+            </Link>
+            <Link href="/conta">
+              <FontAwesomeIcon icon={faUserCircle} className="text-primary h-5 p-4 hover:text-primaryDark transition-all duration-300" />
+            </Link>
           </div>
+
         </div>
       </div>
       <nav className="w-screen md:hidden flex justify-center gap-10 items-center pb-5 bg-light">
