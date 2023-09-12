@@ -32,7 +32,7 @@ export default function Carrinho() {
                 <div>
                     <ItemCarrinho
                         foto={futebol}
-                        titulo="Queijo"
+                        titulo="Brinquedo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
@@ -40,7 +40,7 @@ export default function Carrinho() {
                     />
                     <ItemCarrinho
                         foto={futebol}
-                        titulo="Queijo"
+                        titulo="Brinquedo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
@@ -48,7 +48,7 @@ export default function Carrinho() {
                     />
                     <ItemCarrinho
                         foto={futebol}
-                        titulo="Queijo"
+                        titulo="Brinquedo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
@@ -77,7 +77,7 @@ export default function Carrinho() {
                 <p className="text-sm w-44 text-primary/75"> Clique em finalizar compra para efetuar o seu pedido.</p>
                     <ItemCarrinhoMobile
                         foto={futebol}
-                        titulo="Queijo"
+                        titulo="Brinquedo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
@@ -85,7 +85,7 @@ export default function Carrinho() {
                     />
                     <ItemCarrinhoMobile
                         foto={futebol}
-                        titulo="Queijo"
+                        titulo="Brinquedo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
@@ -93,7 +93,7 @@ export default function Carrinho() {
                     />
                     <ItemCarrinhoMobile
                         foto={futebol}
-                        titulo="Queijo"
+                        titulo="Brinquedo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
