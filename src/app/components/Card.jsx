@@ -12,7 +12,7 @@ function calculateAverageRating(ratings) {
   }
 
   // const totalRating = ratings.reduce((acc, rating) => acc + rating, 0);
-  const averageRating =  ratings.length;
+  const averageRating = ratings.length;
   return averageRating;
 }
 
@@ -36,7 +36,7 @@ function StarRating({ rating }) {
   return <div className="flex drop-shadow-dark0">{starIcons}</div>;
 }
 
-export default function Card({ preco, parcela, precoDesc, link, title, href, ratings,  className = "", }) {
+export default function Card({ preco, parcela, precoDesc, link, title, href, ratings, className = "", }) {
 
   const averageRating = calculateAverageRating(ratings);
   const [isTapped, setIsTapped] = useState(false);
@@ -49,7 +49,7 @@ export default function Card({ preco, parcela, precoDesc, link, title, href, rat
     setIsTapped1(!isTapped1)
   }
   return (
-    <div className={`group bg-blue-100 mr-5 mb-5 md:mr-0 flex flex-col w-96 md:w-72  h-[650px] md:h-[600px] p-1 rounded-xl relative felx justify-center items-center ${className}`}>
+    <div className={`group bg-blue-100 mr-5 mb-5 md:mr-0 flex flex-col p-5 rounded-xl relative felx justify-center items-center ${className}`}>
       <div className="relative w-80 md:w-64">
 
         <Image src={link} alt={title} height={500} width={500} className="rounded-xl" />
@@ -73,9 +73,13 @@ export default function Card({ preco, parcela, precoDesc, link, title, href, rat
         </span>
       </div>
       <div className="space-y-2 flex flex-col justify-center items-center">
-        <h2 className="my-5 font-bold text-zinc-800 text-2xl">{title}</h2>
-        <p className="text-lg font-bold text-zinc-800">R${preco}</p>
-        <StarRating rating={averageRating}/>
+        <h2 className="my-5 font-bold text-zinc-800 text-xl">
+          {title}
+        </h2>
+        <p className="text-lg font-bold text-zinc-800">
+          R${preco}
+        </p>
+        <StarRating rating={averageRating} />
         {/* <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
         <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p> */}
       </div>
