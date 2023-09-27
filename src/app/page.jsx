@@ -8,6 +8,57 @@ import Blog from './components/Blog';
 import Despoimentos from './components/Depoimentos';
 import Image from 'next/image';
 
+import React, { useEffect, useState } from "react"
+import { db } from "../../config/firebase"
+import { collection, getDocs } from 'firebase/firestore';
+
+// func do firebase
+function DatabaseRead() {
+  const [produto, setProduto] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        async function getProduto() {
+          const dataCollection = collection(db, "produtos");
+          const dataSnapshot = await getDocs(dataCollection);
+          const dataList = dataSnapshot.docs.map((doc) => doc.data());
+          setProduto(dataList);
+        }
+        getProduto();
+      } catch (error) {
+        console.error("Erro:", error);
+      }
+    }
+    
+    fetchData();
+  }, []);
+  
+  return (
+    <div className='flex flex-wrap'>
+
+      {produto.map((item) => {
+         // Verifica se a propriedade "imagens" existe e é uma matriz não vazia
+      if (Array.isArray(item.imagens) && item.imagens.length > 0) {
+        // Pega o primeiro link (índice 0) da matriz de links
+        const primeiroLink = item.imagens[0];
+        console.log(item.id);
+        return (
+          <Card
+          title={item.produto}
+          preco={item.valor}
+          link={primeiroLink}
+          href="/compra"
+          />
+          
+        );
+        
+ } })}
+     
+    </div>
+  );
+}
+
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
     <Link href={link} className='border-dashed border-4 border-blue-500 hover:border-white text-blue-500 p-10 md:p-2 text-4xl text-center font-black font-lobster hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white transition-all duration-300 md:first-letter md:flex md:gap-2'>
@@ -73,17 +124,22 @@ export default function Home() {
               <CardIdade idade="7 - 9" diaMes="Anos" link="/por-idade" />
               <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade" />
             </div>
+
+
+            {/* pagina de produtos */}
             <div className='bg-gradient-to-r w-screen mt-10'>
-              <h2 className='uppercase mt-24 text-black/75 font-bold pb-10 text-4xl '>Novos Produtos</h2>
-              <div className='py-5 flex flex-wrap w-full items-center justify-center'>
-               
+              <h2 className='uppercase mt-24 text-black/75 font-bold pb-10 text-4xl '>
+                Produtos
+              </h2>
+              <div className='py-5 flex flex-wrap justify-center'>
+                <DatabaseRead/>
               </div>
             </div>
             <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>
               Mais comprados
-              </h2>
+            </h2>
             <div className='py-5 flex flex-wrap w-full items-center justify-center'>
-              
+
             </div>
           </div>
         </div>
@@ -93,19 +149,19 @@ export default function Home() {
         <div className='flex gap-5 flex-wrap justify-center'>
           <Despoimentos
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
-            
+
             name="José lorem Y"
             cidade="São Lourenço"
           />
           <Despoimentos
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
-            
+
             name="José lorem Y"
             cidade="São Lourenço"
           />
           <Despoimentos
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
-           
+
             name="José lorem Y"
             cidade="São Lourenço"
           />

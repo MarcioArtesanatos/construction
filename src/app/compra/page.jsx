@@ -1,12 +1,12 @@
 "use client"
-import image from '../../../public/elicoptero.jpeg'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import CarrosselCompra from '../components/CarrosselCompra';
 import { useState } from 'react';
 import Card from '../components/Card';
 
-import elicoptero from "../../../public/elicoptero.jpeg"
+
 
 export default function Compra() {
 
@@ -16,7 +16,7 @@ export default function Compra() {
     <div className="p-16 bg-light">
       <div className="flex justify-center rounded-lg p-10 ">
         <div className="flex items-center justify-center  h-full">
-          <CarrosselCompra primeira={image} segunda={image} terceira={image} title="foto de um foguete" />
+          {/* <CarrosselCompra primeira={image} segunda={image} terceira={image} title="foto de um foguete" /> */}
         </div>
         <div className=" w-[40%] text-black/75">
           <h2 className="text-5xl pb-2 border-b-2 border-black/75 font-bold">Foguete</h2>
@@ -67,9 +67,9 @@ export default function Compra() {
       <div className='p-10'>
         <h2 className='text-blue-500 font-bold text-xl py-5'>Produtos Relacionados</h2>
         <div className='flex items-center justify-center gap-10'>
+          {/* <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
           <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
-          <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
-          <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" />
+          <Card title="Caminhão" preço=" R$ 10,00" link={elicoptero} href="compra" /> */}
         </div>
       </div>
     </div>
