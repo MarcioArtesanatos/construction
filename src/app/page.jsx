@@ -47,6 +47,7 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
               title={item.produto}
               preco={item.valor}
               link={primeiroLink}
+              ratings={item.avaliacao}
               href="/compra"
             />
           );
@@ -84,6 +85,8 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }) => {
     </div>
   );
 };
+
+
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,14 +1,44 @@
 "use client"
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faHeart, faShare, faShareAlt, faShareNodes, faShareSquare, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faCartPlus, faHeart, faShare, faShareAlt, faShareNodes, faShareSquare, faShoppingCart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion"
 import { useState } from "react";
 import Link from "next/link";
 
+function calculateAverageRating(ratings) {
+  if (!ratings || ratings.length === 0) {
+    return 0; // Se não houver avaliações ou se ratings for undefined, a média é 0.
+  }
 
-export default function Card({ preco, parcela, precoDesc, link, title, href, className = "", }) {
+  // const totalRating = ratings.reduce((acc, rating) => acc + rating, 0);
+  const averageRating =  ratings.length;
+  return averageRating;
+}
 
+function StarRating({ rating }) {
+  const numStars = 5;
+  const filledStars = Math.floor(rating);
+
+  const starIcons = [];
+  for (let i = 0; i < numStars; i++) {
+    if (i < filledStars) {
+      starIcons.push(
+        <FontAwesomeIcon key={i} icon={faStar} className="text-gray-300" />
+      );
+    } else {
+      starIcons.push(
+        <FontAwesomeIcon key={i} icon={faStar} className="text-yellow-500" />
+      );
+    }
+  }
+
+  return <div className="flex">{starIcons}</div>;
+}
+
+export default function Card({ preco, parcela, precoDesc, link, title, href, ratings,  className = "", }) {
+
+  const averageRating = calculateAverageRating(ratings);
   const [isTapped, setIsTapped] = useState(false);
   const [isTapped1, setIsTapped1] = useState(false);
 
@@ -45,6 +75,7 @@ export default function Card({ preco, parcela, precoDesc, link, title, href, cla
       <div className="space-y-2 flex flex-col justify-center items-center">
         <h2 className="my-5 font-bold text-2xl">{title}</h2>
         <p className="text-lg font-bold">R${preco}</p>
+        <StarRating rating={averageRating} />
         {/* <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
         <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p> */}
       </div>
