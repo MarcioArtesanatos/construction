@@ -40,7 +40,6 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
       {produto.map((item) => {
         if (Array.isArray(item.imagens) && item.imagens.length > 0) {
           const primeiroLink = item.imagens[0];
-          console.log(item.id);
           return (
             <Card
               key={item.id}
@@ -90,7 +89,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }) => {
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 1;
+  const itemsPerPage = 10;
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
