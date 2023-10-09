@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function calculateAverageRating(ratings) {
   if (!ratings || ratings.length === 0) {
-    return 0; // Se não houver avaliações ou se ratings for undefined, a média é 0.
+    return 0;
   }
 
   // const totalRating = ratings.reduce((acc, rating) => acc + rating, 0);
@@ -33,7 +33,7 @@ function StarRating({ rating }) {
     }
   }
 
-  return <div className="flex drop-shadow-dark0">{starIcons}</div>;
+  return <div className="flex">{starIcons}</div>;
 }
 
 export default function Card({ preco, parcela, precoDesc, link, title, href, ratings, className = "", }) {
@@ -72,18 +72,19 @@ export default function Card({ preco, parcela, precoDesc, link, title, href, rat
           </motion.button>
         </span>
       </div>
-      <div className="space-y-2 flex flex-col justify-center items-center">
-        <h2 className="my-5 font-bold text-zinc-800 text-xl">
+      <div className=" flex flex-col justify-center items-center">
+        <h2 className="font-bold text-zinc-800 text-xl mt-5 mb-2">
           {title}
         </h2>
-        <p className="text-lg font-bold text-zinc-800">
-          R${preco}
-        </p>
         <StarRating rating={averageRating} />
+        <p className="text-xl font-bold text-zinc-800 mt-5">
+          R$ {preco}
+        </p>
+        
         {/* <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
         <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p> */}
       </div>
-      <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-10 w-44">
+      <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-5 w-44">
 
         <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
         Comprar

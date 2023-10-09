@@ -8,6 +8,10 @@ import { faCreditCard, faShield, faShieldAlt, faTruckFast } from '@fortawesome/f
 import Blog from './components/Blog';
 import Despoimentos from './components/Depoimentos';
 import Image from 'next/image';
+import danila from '../../public/danila.jpg';
+import leonardo from '../../public/leonardo.jpg';
+import tiago from '../../public/tiago.jpg';
+import modelo from '../../public/modelo.jpg';
 
 import { db } from "../../config/firebase"
 import { collection, getDocs } from 'firebase/firestore';
@@ -36,7 +40,7 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
   }, [currentPage]);
 
   return (
-    <div className='flex flex-wrap'>
+    <div className='flex flex-wrap gap-5 px-16 items-center justify-center'>
       {produto.map((item) => {
         if (Array.isArray(item.imagens) && item.imagens.length > 0) {
           const primeiroLink = item.imagens[0];
@@ -44,9 +48,9 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
             <Card
               key={item.id}
               title={item.produto}
+              ratings={item.avaliacao}
               preco={item.valor}
               link={primeiroLink}
-              ratings={item.avaliacao}
               href="/compra"
             />
           );
@@ -111,7 +115,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className='w-screen'>
-        <Image src={bgCrianca} alt='desenho de crianças brincando com brinquedos de madeira' className='opacity-70' />
+        <Image src={bgCrianca} alt='desenho de crianças brincando com brinquedos de madeira' />
       </div>
 
       <main className='bg-light w-full pt-10'>
@@ -155,7 +159,7 @@ export default function Home() {
               <CardIdade idade="9 - 12" diaMes="Anos" link="/por-idade" />
             </div>
 
-            <div className='bg-gradient-to-r w-screen mt-10'>
+            <div className='bg-gradient-to-r w-screen mt-10 mb-10'>
               <h2 className='uppercase mt-24 text-black/75 font-bold pb-10 text-4xl '>
                 Produtos
               </h2>
@@ -168,33 +172,32 @@ export default function Home() {
                 setCurrentPage={setCurrentPage}
               />
             </div>
-            <h2 className='uppercase mt-24 text-black/75 font-bold py-10 text-4xl '>
-              Mais comprados
-            </h2>
-            <div className='py-5 flex flex-wrap w-full items-center justify-center'>
-
-            </div>
+            
           </div>
         </div>
       </main>
 
       <div className='flex flex-col w-screen justify-center items-center p-16 bg-primaryDark'>
-        <h2 className='text-4xl text-white font-bold pb-10'>Depoimentos</h2>
+        <h2 className='text-4xl text-white font-bold'>Depoimentos</h2>
+        <p className="text-2xl pb-10 font-bold text-yellow-400">Veja o que nossos clientes estão falando...</p>
         <div className='flex gap-5 flex-wrap justify-center'>
           <Despoimentos
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
-            name="José lorem Y"
+            foto={danila}
+            text="Brinquedos sensacionais e com preços super acessíveis. Vou comprar sempre!"
+            name="Danila Ionan"
             cidade="São Lourenço"
           />
           <Despoimentos
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
-            name="José lorem Y"
+            foto={leonardo}
+            text="Minha filha adora os brinquedos do Márcio. Compro sempre. Recomendo."
+            name="Leonardo Ortiz"
             cidade="São Lourenço"
           />
           <Despoimentos
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolore quasi voluptas?"
-            name="José lorem Y"
-            cidade="São Lourenço"
+            foto={tiago}
+            text="Grande variedade e preços excelentes. Entrega super rápida. Atendimento nota 1000."
+            name="Tiago Ribeiro"
+            cidade="São Paulo"
           />
         </div>
       </div>
@@ -203,16 +206,19 @@ export default function Home() {
         <h2 className='text-4xl text-black/75 font-bold'>Blog</h2>
         <div className='flex flex-wrap justify-center'>
           <Blog
-            title="lorem"
-            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cupiditate delectus odio architecto repudiandae officia expedita, quia, minima debitis voluptas nesciunt est et animi libero aperiam similique dicta. Cum, amet?"
+            link={modelo}
+            title="A importância dos brinquedos educativos para crianças"
+            text="O brincar é uma atividade essencial para o desenvolvimento infantil. É através da brincadeira que as crianças aprendem sobre o mundo ao seu redor, desenvolvem suas habilidades motoras, cognitivas, sociais e emocionais."
           />
           <Blog
-            title="lorem"
-            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cupiditate delectus odio architecto repudiandae officia expedita, quia, minima debitis voluptas nesciunt est et animi libero aperiam similique dicta. Cum, amet?"
+            link={modelo}
+            title="Como escolher brinquedos adequados para cada idade"
+            text="Ofereça dicas e orientações para pais e cuidadores sobre como selecionar brinquedos educativos apropriados para a idade e estágio de desenvolvimento de uma criança. Discuta fatores como segurança, interesse da criança."
           />
           <Blog
-            title="lorem"
-            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus cupiditate delectus odio architecto repudiandae officia expedita, quia, minima debitis voluptas nesciunt est et animi libero aperiam similique dicta. Cum, amet?"
+            link={modelo}
+            title="Opções para Crianças com Necessidades Especiais"
+            text="Discuta brinquedos educativos adaptados para crianças com diferentes necessidades, destacando a importância da inclusão e como esses brinquedos podem apoiar o desenvolvimento de todas as crianças."
           />
         </div>
       </div>
