@@ -72,11 +72,10 @@ export default function NavBar() {
         </div>
       </div>
       <nav className="w-screen md:hidden flex justify-center gap-10 items-center pb-5 bg-light">
-        <CustomLink href="/" title="Inicio" />
-        <CustomLink href="/quem-somos" title="Sobre" />
-        <CustomLink href="#" title="Produtos" />
+        <CustomLink href="/" title="Início" />
+        <CustomLink href="/quem-somos" title="Quem Somos" />
+        <CustomLink href="/produtos" title="Produtos" />
         <CustomLink href="/fale-conosco" title="Contato" />
-
       </nav>
     </div>
   )

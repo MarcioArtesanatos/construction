@@ -1,31 +1,34 @@
+import Image from "next/image";
+import sobre from '../../../public/sobre.jpg';
+import header from '../../../public/header_quemsomos.jpg';
+
 export default function QuemSomos() {
     return (
-        <div className="flex flex-col  p-16 text-black/75 bg-light">
-            <h2 className="text-4xl font-bold flex justify-center items-center w-full py-10">Quem Somos</h2>
-            <p>
-                Bem-vindas (os) À Marcio Artesanatos!
-            </p><br />
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ipsam aspernatur accusamus rem explicabo expedita temporibus nostrum totam amet. Id odit quam quisquam consequatur neque veritatis minus nam dolore numquam.
-            </p><br />
+        <div className="container">
+            <div className="titulo">
+                <Image src={header} alt="Header" />
+            </div>
 
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos perspiciatis iste architecto recusandae. Culpa repellat voluptatum placeat dolore harum iste aspernatur. Modi rerum maiores repudiandae cupiditate, officiis autem quos eaque.
-            </p><br />
+            <div className="flex justify-center items-center">
+            <div className="flex flex-col p-16 text-black/75 bg-light">
+                <p className="text-xl">Sejam todos bem vindos à Marcio Artesanatos!</p><br />
+                <p className="text-xl">Há 7 anos transformando brinquedos em momentos incríveis.</p><br />
+                <p className="text-xl">O brincar é uma oportunidade para o desenvolvimento da criança, pois por meio das brincadeiras elas aprendem e experimentam novos desafios.</p><br />
+                <p className="text-xl">Nossos produtos auxiliam o desenvolvimento das crianças, acompanhando as diversas etapas de seu crescimento, possibilitando um universo novo, onde é exercitada a todo momento sua criatividade e imaginação.</p><br />
+                <p className="text-xl">Além disso, temos o diferencial de apresentar ao mercado frequentes lançamentos, fazendo com que a brincadeira nunca seja a mesma.</p><br />
+                <p className="text-xl">Siga-nos em nossas Redes Sociais e acompanhe de perto as novidades!</p><br />
+                <p className="text-xl">Um abraço!</p><br />
+            </div>
+            <div className="foto pr-16">
+                <Image src={sobre} alt="Criança" />
+            </div>
+        </div>
 
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ipsam aspernatur accusamus rem explicabo expedita temporibus nostrum totam amet. Id odit quam quisquam consequatur neque veritatis minus nam dolore numquam
-            </p><br />
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ipsam aspernatur accusamus rem explicabo expedita temporibus nostrum totam amet. Id odit quam quisquam consequatur neque veritatis minus nam dolore numquam
-            </p><br />
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ipsam aspernatur accusamus rem explicabo expedita temporibus nostrum totam amet. Id odit quam quisquam consequatur neque veritatis minus nam dolore numquam
-            </p><br />
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ipsam aspernatur accusamus rem explicabo expedita temporibus nostrum totam amet. Id odit quam quisquam consequatur neque veritatis minus nam dolore numquam
-            </p><br />
+
+
 
         </div>
+        
+        
     )
 }
