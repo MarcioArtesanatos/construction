@@ -8,7 +8,7 @@ export default function PoliticaDePrivacidade() {
                 <Image src={header} alt="Política de Privacidade" />
             </div>
 
-            <div className="flex flex-col justify-center text-center items-center p-16 text-black/75 bg-light">
+            <div className="flex flex-col justify-center text-center items-center md:p-5 p-16 text-black/75 bg-light">
                 
                 <p className="text-xl font-bold">Certificado de Segurança SSL</p>
                 <p>Na loja todas as páginas estão em ambiente seguro, como pode verificar o <span className="font-bold">cadeado verde</span> na URL. Todos os dados são criptografados, garantindo segurança total às transações.</p><br />

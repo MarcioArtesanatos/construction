@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Blog({ link, title, text }) {
     return (
-        <div className="mr-5 mt-10 flex justify-center items-center rounded">
+        <div className="mt-10 flex justify-center items-center rounded">
             <div className="w-72 flex flex-col justify-center items-center bg-light rounded">
                 <Image src={link} className="rounded-xl mb-5" alt="Brinquedo" />
                 <div className="text-2xl font-bold text-center mb-5">{title}</div>
