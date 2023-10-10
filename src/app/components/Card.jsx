@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faHeart, faShare, faShareAlt, faShareNodes, faShareSquare, faShoppingCart, faStar } from "@fortawesome/free-solid-svg-icons";
+import {  faHeart, faShareSquare, faShoppingCart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion"
 import { useState } from "react";
 import Link from "next/link";
@@ -84,7 +84,7 @@ export default function Card({ preco, parcela, precoDesc, link, title, href, rat
         {/* <p className="text-black/75 text-xs">até <span className="font-bold text-black">6x</span> de <span className="font-bold text-black">R${parcela} </span>sem juros</p>
         <p className="text-center text-sm"><span className="font-bold text-lg text-black">R${precoDesc}</span> no pix/boleto com 10% de desconto </p> */}
       </div>
-      <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-5 w-44">
+      <Link href="#" target="_blank" className="bg-white px-5 py-2 text-black/75 hover:text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 border border-black/75 hover:border-white rounded mt-5 w-44 flex justify-center items-center">
 
         <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
         Comprar
