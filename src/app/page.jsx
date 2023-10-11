@@ -1,4 +1,3 @@
-
 import bgCrianca from "../../public/bgCrianca.jpg"
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,8 +10,6 @@ import leonardo from '../../public/leonardo.jpg';
 import tiago from '../../public/tiago.jpg';
 import modelo from '../../public/modelo.jpg';
 import Produto from "./components/Produto";
-
-
 
 const CardIdade = ({ idade, diaMes, link }) => {
   return (
@@ -110,7 +107,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex flex-col w-screen justify-center items-center md:p-5'>
+      <div className='flex flex-col w-screen justify-center items-center md:p-5 my-10'>
         <h2 className='text-4xl text-black/75 font-bold'>Blog</h2>
         <div className='flex flex-wrap justify-center items-center gap-5'>
           <Blog

@@ -46,7 +46,7 @@ export default function NavBar() {
         </div>
 
         <div>
-          <Link href="#" className="flex justify-center items-center hover:text-blue-500 transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />+55 35 9121-6423</Link>
+          <Link href="https://wa.me/5535991216423" target="_blank" className="flex justify-center items-center hover:text-blue-500 transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />(35) 99121-6423</Link>
         </div>
       </div>
       <div className="w-screen flex justify-center items-center pt-10">
